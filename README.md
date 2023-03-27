@@ -1,4 +1,4 @@
-# next-ts-tailwind-template
+# aikatan-2023-frontend
 
 ## How to Run
 
@@ -11,4 +11,3 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-# aikatan-2023-frontend

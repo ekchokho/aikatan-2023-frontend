@@ -1,5 +1,13 @@
 {
-  "name": "next-ts-tailwind-template",
+  "name": "aikatan-2023-frontend",
+  "author": "rkmgec",
+  "description": "Annual Cultural and Technical Fest of Aikatan 2.0",
+  "homepage": "/",
+  "repository": "https://github.com/RKMGEC-Purulia/aikatan-2023-frontend",
+  "keywords": [
+    "rkmgec",
+    "aikatan"
+  ],
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -26,6 +34,7 @@
     "@twind/preset-tailwind": "^1.1.4",
     "@twind/with-next": "^1.2.2",
     "axios": "1.3.4",
+    "framer-motion": "^10.9.1",
     "install": "^0.13.0",
     "next": "13.2.4",
     "nextjs-progressbar": "0.0.16",
