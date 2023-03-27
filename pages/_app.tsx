@@ -1,17 +1,20 @@
 import React from 'react'
 
 import { twindConfig } from '@/config'
-import { Layout } from '@/layout'
+import { HeadManager, Layout } from '@/layout'
 import { AppProps } from '@/types'
 import install from '@twind/with-next/app'
 
-import '@/styles/globals.css'
+import '@/styles/globals.scss'
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <Layout {...(Component.layout || {})}>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <HeadManager {...(Component.seo || {})} />
+      <Layout {...(Component.layout || {})}>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   )
 }
 

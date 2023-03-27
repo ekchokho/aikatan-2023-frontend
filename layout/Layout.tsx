@@ -29,7 +29,7 @@ const Layout = ({
 }: LayoutProps) => {
   return (
     <div
-      className={tx('font-sans bg-gray-900 text-white', className)}
+      className={tx('font-roboto bg-gray-900 text-white', className)}
       {...props}>
       <div
         className={tx(
