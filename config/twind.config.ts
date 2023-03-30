@@ -59,13 +59,13 @@ export default defineConfig({
           dark: '#A7A7BE',
           muted: '#6E6B80'
         }
+      },
+      screens: {
+        xs: '320px'
+      },
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif']
       }
-    },
-    screens: {
-      xs: '320px'
-    },
-    fontFamily: {
-      roboto: ['Roboto', 'sans-serif']
     }
   }
 })

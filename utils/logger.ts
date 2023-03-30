@@ -11,9 +11,11 @@ const enableLogs =
     : // enable logs in server console
       true
 
-export const logger = (module: string, ...message: any[]) => {
+const logger = (module: string, ...message: any[]) => {
   if (process.env.NODE_ENV === 'development' || enableLogs) {
     // eslint-disable-next-line no-console
     console.log(`[${module}]`, ...message)
   }
 }
+
+export default logger
