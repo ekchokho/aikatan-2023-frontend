@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 import { START_DATE_OF_FEST } from '@/constant'
 import { calculateTimeLeft } from '@/features/Home/utils'
-import { isServer, objectKeys } from '@/utils'
+import { objectKeys } from '@/utils'
 
 const CountDownTimer = () => {
   const [timeLeft, setTimeLeft] = useState(
@@ -11,8 +11,6 @@ const CountDownTimer = () => {
   )
 
   useEffect(() => {
-    if (isServer()) return
-
     const timer = setTimeout(() => {
       setTimeLeft(calculateTimeLeft(START_DATE_OF_FEST))
     }, 1000)
