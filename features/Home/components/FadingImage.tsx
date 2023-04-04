@@ -119,7 +119,7 @@ function FadingImage() {
     return () => clearInterval(interval)
   })
 
-  const size = useAspect(1920, 1080, 1.06)
+  const size = useAspect(1920, 1080, 1)
 
   return (
     <mesh scale={size}>
