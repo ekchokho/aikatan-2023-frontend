@@ -57,7 +57,7 @@ type NumberCardProps = {
 
 const NumberCard = ({ number }: NumberCardProps) => {
   return (
-    <div className="relative bg-primary-light rounded flex items-center justify-center shadow-md shadow-secondary/50">
+    <div className="relative bg-primary-light rounded flex items-center justify-center shadow-md shadow-secondary-dark-2/80">
       <p className="px-3 py-1 sm:px-4 sm:py-2 text-xl sm:text-5xl text-secondary font-bold z-10">
         {number}
       </p>

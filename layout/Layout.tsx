@@ -48,7 +48,7 @@ const Layout = ({
 
         <div
           className={tx(
-            'flex-1 flex flex-col max-w-7xl w-full mx-auto scrollbar',
+            'flex-1 flex flex-col max-w-7xl w-full mx-auto',
             pageClassName
           )}>
           {children}
