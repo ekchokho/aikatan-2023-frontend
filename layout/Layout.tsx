@@ -48,7 +48,7 @@ const Layout = ({
 
         <div
           className={tx(
-            'flex-1 flex flex-col max-w-7xl w-full mx-auto',
+            'flex-1 flex flex-col max-w-7xl w-full mx-auto overflow-hidden',
             pageClassName
           )}>
           {children}
