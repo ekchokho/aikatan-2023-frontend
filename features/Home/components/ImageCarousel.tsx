@@ -1,15 +1,12 @@
 import React, { Suspense } from 'react'
 
-import FadingImage from '@/features/Home/components/FadingImage'
 import { Canvas } from '@react-three/fiber'
 
-const ImageCarousel = () => {
+const ImageCarousel = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="top-0 left-0 absolute w-full h-screen">
       <Canvas>
-        <Suspense fallback={null}>
-          <FadingImage />
-        </Suspense>
+        <Suspense fallback={null}>{children}</Suspense>
       </Canvas>
     </div>
   )

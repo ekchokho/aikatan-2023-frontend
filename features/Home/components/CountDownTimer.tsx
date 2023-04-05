@@ -23,7 +23,7 @@ const CountDownTimer = () => {
   }
 
   return (
-    <div className="flex flex-wrap gap-3 sm:gap-5 items-center justify-center">
+    <div className="flex flex-wrap gap-2 sm:gap-5 items-center justify-center">
       {objectKeys(timeLeft).map((type) => (
         <NumbersCardWrapper heading={type} key={type}>
           {timeLeft[type].map((num, idx) => (
@@ -58,10 +58,10 @@ type NumberCardProps = {
 const NumberCard = ({ number }: NumberCardProps) => {
   return (
     <div className="relative bg-primary-light rounded flex items-center justify-center shadow-md shadow-secondary-dark-2/80">
-      <p className="px-3 py-1 sm:px-4 sm:py-2 text-xl sm:text-5xl text-secondary font-bold z-10">
+      <p className="px-2.5 py-1 sm:px-4 sm:py-2 text-lg sm:text-5xl text-secondary font-bold z-10">
         {number}
       </p>
-      <div className="w-full h-[0.6px] top-1/2 absolute bg-secondary-1" />
+      <div className="invisible sm:visible w-full h-[0.6px] top-1/2 absolute bg-secondary-1" />
       <AnimatePresence>
         <motion.div
           key={number}

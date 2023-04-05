@@ -70,6 +70,10 @@ const HeadManager = (props: NextSeoProps) => {
           rel="stylesheet"
           crossOrigin="anonymous"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap"
+          rel="stylesheet"
+        />
         <link rel="icon" href="/favicon.svg" />
         <title>{common.title}</title>
       </Head>
