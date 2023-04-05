@@ -36,8 +36,10 @@ export const IntroSection = () => {
         </div>
         {/* <div className="absolute w-32 h-32 bg-gray-300 rounded-full"></div> */}
       </div>
-      <div className="z-20 w-min container font-bengali-noto-sans text-2xl sm:text-5xl font-bold text-center text-amber-400">
-        <p className="typed-out text-center">#এক ধনুকে পঞ্চবাণ</p>
+      <div className="z-20 typewriter font-bengali-noto-sans text-2xl sm:text-5xl font-semibold text-amber-400">
+        <h1 className={'border-r-4 border-amber-400 px-2'}>
+          #এক ধনুকে পঞ্চবাণ
+        </h1>
       </div>
       <div>
         <p className="text-xl sm:7xl text-center text-content">
