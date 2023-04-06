@@ -183,6 +183,15 @@ const HeroSection = () => {
     <div
       className={'w-full h-full flex-1 flex flex-col'}
       onTouchStart={handleTouchStart}
+      onTouchMove={(event) => {
+        const { clientY } = event.touches[0]
+        const scrollTop = event.currentTarget.scrollTop
+        const isScrollingDown = scrollTop === 0 && clientY > startY
+
+        if (isScrollingDown) {
+          event.preventDefault()
+        }
+      }}
       onTouchEnd={handleTouchEnd}>
       <div className="w-full h-full flex-1 flex flex-col items-center justify-center gap-10">
         <div className="absolute w-full h-full top-0 left-0 overflow-hidden">
