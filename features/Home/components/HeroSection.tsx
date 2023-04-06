@@ -123,7 +123,7 @@ const HeroSection = () => {
     if (isUpdating) {
       const interval = setTimeout(() => {
         setIsUpdating(false)
-      }, 800)
+      }, 600)
       return () => clearTimeout(interval)
     }
   })
@@ -173,6 +173,7 @@ const HeroSection = () => {
 
       console.log('Swiped up')
     }
+    setIsUpdating(true)
   }
 
   return (
