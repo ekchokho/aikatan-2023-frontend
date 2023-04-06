@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 
 import Image1Desktop from '@/assets/events/1.jpg'
 import Image1Mobile from '@/assets/events/1-mobile.jpg'
@@ -19,7 +19,7 @@ import Image8Mobile from '@/assets/events/8-mobile.jpg'
 import HeightMap from '@/assets/images/heightMap.png'
 import FadingImage from '@/features/Home/components/FadingImage'
 import ImageCarousel from '@/features/Home/components/ImageCarousel'
-import { useWindowSize } from '@/hooks'
+import { useVH, useWindowSize } from '@/hooks'
 import {
   ArrowSmallLeftIcon,
   ArrowSmallRightIcon
@@ -80,9 +80,9 @@ export const events = [
 const HeroSection = () => {
   const [dispFactor, setDispFactor] = useState<1 | 0>(1)
   const [selected, setSelected] = useState(0)
-  // const [intervalTime, setIntervalTime] = useState(5000)
   const windowSize = useWindowSize()
   const isInMobile = windowSize.width < 640
+  const [isUpdating, setIsUpdating] = useState(false)
 
   const currentSelectedEvent = events[selected]
   const SelectedEventComponet = currentSelectedEvent.Component
@@ -112,31 +112,50 @@ const HeroSection = () => {
     }
     setDispFactor(dispFactor === 0 ? 1 : 0)
     setSelected(newSelected)
-    // setIntervalTime(5000)
   }
 
   const isInFist = selected === 0
   const isInLast = selected === images.length - 1
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setDispFactor(dispFactor === 0 ? 1 : 0)
-  //
-  //     const arrlen = images.length
-  //     let current = selected
-  //     if (arrlen - 1 === current) {
-  //       current = 0
-  //     } else {
-  //       current++
-  //     }
-  //     setSelected(current)
-  //   }, intervalTime)
-  //   return () => clearInterval(interval)
-  // })
+  useEffect(() => {
+    if (isUpdating) {
+      const interval = setTimeout(() => {
+        setIsUpdating(false)
+      }, 800)
+      return () => clearTimeout(interval)
+    }
+  })
+
+  useEffect(() => {
+    const handleScroll = (event: WheelEvent) => {
+      const wheelDeltaY = event.deltaY
+      if (isUpdating) return
+
+      if (wheelDeltaY < 0) {
+        if (selected === 0) return
+        handleChangeContent('left')
+      } else {
+        if (selected === images.length - 1) return
+        handleChangeContent('right')
+      }
+
+      setIsUpdating(true)
+    }
+
+    window.addEventListener('wheel', handleScroll)
+
+    return () => {
+      window.removeEventListener('wheel', handleScroll)
+    }
+  })
+
+  const vh = useVH()
 
   return (
-    <div className={'w-full h-full flex-1 flex flex-col min-h-screen'}>
-      <div className="w-full h-full flex-1 flex flex-col">
+    <div
+      className={'w-full h-full flex-1 flex flex-col'}
+      style={{ height: `${100 * vh}px` }}>
+      <div className="w-full h-full flex-1 flex flex-col items-center justify-center gap-20 sm:gap-10">
         <div className="absolute w-full h-full top-0 left-0 overflow-hidden">
           <div className="absolute w-full h-full">
             <ImageCarousel>
@@ -153,7 +172,7 @@ const HeroSection = () => {
           <GradientHeroSection />
         </div>
         <SelectedEventComponet />
-        <div className="z-10 absolute flex flex-row gap-6 top-[90vh] left-1/2 -translate-x-1/2">
+        <div className="z-10 flex flex-row gap-6 justify-center">
           <button
             className={tx(
               'border-2 border-primary-3 text-primary-3 hover:border-transparent hover:text-white hover:bg-primary hover:scale-110 transition-all rounded-full p-1',
