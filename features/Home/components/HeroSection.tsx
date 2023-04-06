@@ -166,10 +166,13 @@ const HeroSection = () => {
     if (distance > 0) {
       // Handle swipe down
       console.log('Swiped down')
-      handleChangeContent('right')
+
+      handleChangeContent('left')
     } else if (distance < 0) {
       // Handle swipe up
-      handleChangeContent('left')
+
+      event.preventDefault()
+      handleChangeContent('right')
 
       console.log('Swiped up')
     }
