@@ -126,7 +126,7 @@ const HeroSection = () => {
     if (isUpdating) {
       const interval = setTimeout(() => {
         setIsUpdating(false)
-      }, 600)
+      }, 300)
       return () => clearTimeout(interval)
     }
   })

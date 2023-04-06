@@ -5,7 +5,7 @@ const GradientHeroSection = () => {
     <div
       className="absolute w-full h-full top-0 left-0"
       style={{
-        background: `linear-gradient(rgba(0, 11, 17, 0) 60%, rgba(1, 15, 27, 0.99)),linear-gradient(120deg, rgba(0, 11, 17, 0.80), rgba(121, 56, 50, 0.50), rgba(121, 56, 50, 0.50), rgba(1, 15, 60, 0.80));`
+        background: `linear-gradient(rgba(0, 11, 17, 0) 60%, rgba(1, 15, 27, 0.99)),linear-gradient(120deg, rgba(0, 11, 17, 0.80), rgba(121, 56, 50, 0.50), rgba(121, 56, 50, 0.50), rgba(1, 15, 60, 0.80))`
       }}></div>
   )
 }
