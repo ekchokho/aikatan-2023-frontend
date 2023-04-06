@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 
 import Image1Desktop from '@/assets/events/1.jpg'
 import Image1Mobile from '@/assets/events/1-mobile.jpg'
@@ -69,18 +69,18 @@ export const events = [
     id: 8,
     imageSrc: { mobile: Image8Mobile.src, desktop: Image8Desktop.src },
     Component: IntroSection
-  },
-  {
-    id: 9,
-    imageSrc: { mobile: Image8Mobile.src, desktop: Image8Desktop.src },
-    Component: IntroSection
   }
+  // {
+  //   id: 9,
+  //   imageSrc: { mobile: Image8Mobile.src, desktop: Image8Desktop.src },
+  //   Component: IntroSection
+  // }
 ] as const
 
 const HeroSection = () => {
   const [dispFactor, setDispFactor] = useState<1 | 0>(1)
   const [selected, setSelected] = useState(0)
-  const [intervalTime, setIntervalTime] = useState(5000)
+  // const [intervalTime, setIntervalTime] = useState(5000)
   const windowSize = useWindowSize()
   const isInMobile = windowSize.width < 640
 
@@ -112,27 +112,27 @@ const HeroSection = () => {
     }
     setDispFactor(dispFactor === 0 ? 1 : 0)
     setSelected(newSelected)
-    setIntervalTime(5000)
+    // setIntervalTime(5000)
   }
 
   const isInFist = selected === 0
   const isInLast = selected === images.length - 1
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setDispFactor(dispFactor === 0 ? 1 : 0)
-
-      const arrlen = images.length
-      let current = selected
-      if (arrlen - 1 === current) {
-        current = 0
-      } else {
-        current++
-      }
-      setSelected(current)
-    }, intervalTime)
-    return () => clearInterval(interval)
-  })
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setDispFactor(dispFactor === 0 ? 1 : 0)
+  //
+  //     const arrlen = images.length
+  //     let current = selected
+  //     if (arrlen - 1 === current) {
+  //       current = 0
+  //     } else {
+  //       current++
+  //     }
+  //     setSelected(current)
+  //   }, intervalTime)
+  //   return () => clearInterval(interval)
+  // })
 
   return (
     <div className={'w-full h-full flex-1 flex flex-col min-h-screen'}>
@@ -153,10 +153,10 @@ const HeroSection = () => {
           <GradientHeroSection />
         </div>
         <SelectedEventComponet />
-        <div className="z-10 absolute flex flex-row gap-6 bottom-6 left-1/2 -translate-x-1/2">
+        <div className="z-10 absolute flex flex-row gap-6 top-[90vh] left-1/2 -translate-x-1/2">
           <button
             className={tx(
-              'border-2 border-secondary text-secondary hover:border-secondary-dark-1 hover:text-secondary-dark-1 hover:scale-110 transition-all rounded-full p-1',
+              'border-2 border-primary-3 text-primary-3 hover:border-transparent hover:text-white hover:bg-primary hover:scale-110 transition-all rounded-full p-1',
               isInFist ? 'invisible' : 'visible'
             )}
             name={'left'}
@@ -166,7 +166,7 @@ const HeroSection = () => {
           </button>
           <button
             className={tx(
-              'border-2 border-secondary text-secondary hover:border-secondary-dark-1 hover:text-secondary-dark-1 hover:scale-110 transition-all rounded-full p-1',
+              'border-2 border-primary-3 text-primary-3 hover:border-transparent hover:text-white hover:bg-primary hover:scale-110 transition-all rounded-full p-1',
               isInLast ? 'invisible' : 'visible'
             )}
             name={'right'}

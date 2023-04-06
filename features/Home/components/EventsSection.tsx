@@ -13,7 +13,7 @@ const CountDownTimerDynamic = dynamic(
 
 export const IntroSection = () => {
   return (
-    <div className="z-10 flex-1 w-full h-full justify-center flex items-center flex-col gap-3">
+    <div className="z-10 flex-1 w-full h-full mt-44 sm:mt-0 sm:justify-center flex items-center flex-col gap-3">
       <div className="relative flex items-center flex-col">
         {/* <div> */}
         {/*   <p className="text-xl sm:7xl text-center text-content"> */}
@@ -27,7 +27,8 @@ export const IntroSection = () => {
             className={'h-full w-full'}
           />
         </div>
-        <div className={'w-full max-w-sm h-full scale-125 opacity-90'}>
+        <div
+          className={'w-52 sm:w-full sm:max-w-sm h-full scale-125 opacity-90'}>
           <img
             src={NeonEffect.src}
             alt="aikatan 2.0 logo"
