@@ -1,6 +1,7 @@
 import NextProgress from 'nextjs-progressbar'
 import React from 'react'
 
+import { useVH } from '@/hooks'
 import { HTMLDivProps } from '@/types/html'
 import { tx } from '@twind/core'
 
@@ -27,14 +28,15 @@ const Layout = ({
   screenHeight,
   ...props
 }: LayoutProps) => {
+  const vh = useVH()
   return (
     <div
       className={tx('font-roboto bg-gray-900 text-white', className)}
       {...props}>
       <div
         className={tx(
-          'flex flex-col min-h-screen',
-          screenHeight && 'max-h-screen'
+          `flex flex-col min-h-[${100 * vh}px]`,
+          screenHeight && `h-[${100 * vh}px]`
         )}>
         {!hideNavbar && <Navbar />}
 

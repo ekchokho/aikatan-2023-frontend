@@ -19,7 +19,7 @@ import Image8Mobile from '@/assets/events/8-mobile.jpg'
 import HeightMap from '@/assets/images/heightMap.png'
 import FadingImage from '@/features/Home/components/FadingImage'
 import ImageCarousel from '@/features/Home/components/ImageCarousel'
-import { useVH, useWindowSize } from '@/hooks'
+import { useWindowSize } from '@/hooks'
 import {
   ArrowSmallLeftIcon,
   ArrowSmallRightIcon
@@ -149,12 +149,8 @@ const HeroSection = () => {
     }
   })
 
-  const vh = useVH()
-
   return (
-    <div
-      className={'w-full h-full flex-1 flex flex-col'}
-      style={{ height: `${100 * vh}px` }}>
+    <div className={'w-full h-full flex-1 flex flex-col'}>
       <div className="w-full h-full flex-1 flex flex-col items-center justify-center gap-20 sm:gap-10">
         <div className="absolute w-full h-full top-0 left-0 overflow-hidden">
           <div className="absolute w-full h-full">
