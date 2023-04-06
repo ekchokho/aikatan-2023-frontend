@@ -99,6 +99,8 @@ const HeroSection = () => {
     let newSelected = selected
     const totalImages = images.length
 
+    if (isUpdating) return
+
     switch (type) {
       case 'left':
         if (selected === 0) return
@@ -114,6 +116,7 @@ const HeroSection = () => {
     }
     setDispFactor(dispFactor === 0 ? 1 : 0)
     setSelected(newSelected)
+    setIsUpdating(true)
   }
 
   const isInFist = selected === 0
@@ -138,8 +141,6 @@ const HeroSection = () => {
       } else {
         handleChangeContent('right')
       }
-
-      setIsUpdating(true)
     }
 
     window.addEventListener('wheel', handleScroll)
@@ -165,7 +166,6 @@ const HeroSection = () => {
     // Check if swipe was up or down
     if (distance > 0) {
       // Handle swipe down
-      console.log('Swiped down')
 
       handleChangeContent('left')
     } else if (distance < 0) {
@@ -173,10 +173,7 @@ const HeroSection = () => {
 
       event.preventDefault()
       handleChangeContent('right')
-
-      console.log('Swiped up')
     }
-    setIsUpdating(true)
   }
 
   return (
