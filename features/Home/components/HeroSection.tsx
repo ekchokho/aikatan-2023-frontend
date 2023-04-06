@@ -101,9 +101,11 @@ const HeroSection = () => {
 
     switch (type) {
       case 'left':
+        if (selected === 0) return
         newSelected = newSelected === 0 ? 0 : --newSelected
         break
       case 'right':
+        if (selected === images.length - 1) return
         newSelected =
           totalImages - 1 === newSelected ? totalImages - 1 : ++newSelected
         break
@@ -132,10 +134,8 @@ const HeroSection = () => {
       if (isUpdating) return
 
       if (wheelDeltaY < 0) {
-        if (selected === 0) return
         handleChangeContent('left')
       } else {
-        if (selected === images.length - 1) return
         handleChangeContent('right')
       }
 
@@ -149,9 +149,38 @@ const HeroSection = () => {
     }
   })
 
+  const [startY, setStartY] = useState(0)
+  const [endY, setEndY] = useState(0)
+
+  function handleTouchStart(event: React.TouchEvent<HTMLDivElement>) {
+    setStartY(event.touches[0].clientY)
+  }
+
+  function handleTouchEnd(event: React.TouchEvent<HTMLDivElement>) {
+    setEndY(event.changedTouches[0].clientY)
+
+    // Calculate distance swiped
+    const distance = endY - startY
+
+    // Check if swipe was up or down
+    if (distance > 0) {
+      // Handle swipe down
+      console.log('Swiped down')
+      handleChangeContent('right')
+    } else if (distance < 0) {
+      // Handle swipe up
+      handleChangeContent('left')
+
+      console.log('Swiped up')
+    }
+  }
+
   return (
-    <div className={'w-full h-full flex-1 flex flex-col'}>
-      <div className="w-full h-full flex-1 flex flex-col items-center justify-center gap-20 sm:gap-10">
+    <div
+      className={'w-full h-full flex-1 flex flex-col'}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}>
+      <div className="w-full h-full flex-1 flex flex-col items-center justify-center gap-10">
         <div className="absolute w-full h-full top-0 left-0 overflow-hidden">
           <div className="absolute w-full h-full">
             <ImageCarousel>
@@ -171,7 +200,7 @@ const HeroSection = () => {
         <div className="z-10 flex flex-row gap-6 justify-center">
           <button
             className={tx(
-              'border-2 border-primary-3 text-primary-3 hover:border-transparent hover:text-white hover:bg-primary hover:scale-110 transition-all rounded-full p-1',
+              'border-2 border-primary-3 text-primary-3 sm:hover:border-transparent sm:hover:text-white sm:hover:bg-primary sm:hover:scale-110 transition-all rounded-full p-1',
               isInFist ? 'invisible' : 'visible'
             )}
             name={'left'}
@@ -181,7 +210,7 @@ const HeroSection = () => {
           </button>
           <button
             className={tx(
-              'border-2 border-primary-3 text-primary-3 hover:border-transparent hover:text-white hover:bg-primary hover:scale-110 transition-all rounded-full p-1',
+              'border-2 border-primary-3 text-primary-3 sm:hover:border-transparent sm:hover:text-white sm:hover:bg-primary sm:hover:scale-110 transition-all rounded-full p-1',
               isInLast ? 'invisible' : 'visible'
             )}
             name={'right'}
