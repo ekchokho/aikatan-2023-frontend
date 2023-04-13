@@ -1,3 +1,4 @@
+import { Noto_Sans_Bengali, Roboto } from 'next/font/google'
 import NextProgress from 'nextjs-progressbar'
 import React from 'react'
 
@@ -7,6 +8,19 @@ import { tx } from '@twind/core'
 
 import Footer from './Footer'
 import Navbar from './Navbar'
+
+const notoSansBengali = Noto_Sans_Bengali({
+  display: 'swap',
+  variable: '--font-bengali-noto-sans',
+  subsets: ['bengali']
+})
+
+const roboto = Roboto({
+  display: 'swap',
+  weight: ['100', '300', '400', '500', '700', '900'],
+  variable: '--font-roboto',
+  subsets: ['latin']
+})
 
 export type LayoutProps = {
   children?: React.ReactNode | React.ReactNode[]
@@ -31,7 +45,12 @@ const Layout = ({
   const vh = useVH()
   return (
     <div
-      className={tx('font-roboto bg-gray-900 text-white', className)}
+      className={tx(
+        roboto.variable,
+        notoSansBengali.variable,
+        'font-roboto bg-gray-900 text-white',
+        className
+      )}
       {...props}>
       <div
         className={tx(

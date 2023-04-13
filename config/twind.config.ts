@@ -64,8 +64,8 @@ export default defineConfig({
         xs: '320px'
       },
       fontFamily: {
-        roboto: ['Roboto', 'sans-serif'],
-        'bengali-noto-sans': ['Noto Sans Bengali']
+        roboto: ['var(--font-roboto)', 'sans-serif'],
+        'bengali-noto-sans': ['var(--font-bengali-noto-sans)', 'sans-serif']
       }
     }
   }
