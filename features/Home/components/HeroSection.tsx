@@ -16,65 +16,71 @@ import Image7Desktop from '@/assets/events/7.jpg'
 import Image7Mobile from '@/assets/events/7-mobile.jpg'
 import Image8Desktop from '@/assets/events/8.jpg'
 import Image8Mobile from '@/assets/events/8-mobile.jpg'
+import Image0 from '@/assets/events/img.png'
 import HeightMap from '@/assets/images/heightMap.png'
 import FadingImage from '@/features/Home/components/FadingImage'
 import ImageCarousel from '@/features/Home/components/ImageCarousel'
 import { useWindowSize } from '@/hooks'
-import {
-  ArrowSmallLeftIcon,
-  ArrowSmallRightIcon
-} from '@heroicons/react/20/solid'
-import { tx } from '@twind/core'
+import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline'
 
-import { IntroSection } from './EventsSection'
 import GradientHeroSection from './GradientHeroSection'
+import { IntroSection } from './IntroSection'
 
 export const events = [
   {
-    id: 1,
-    imageSrc: { mobile: Image1Mobile.src, desktop: Image1Desktop.src },
+    id: 0,
+    label: 'college',
+    imageSrc: { mobile: Image0.src, desktop: Image0.src },
     Component: IntroSection
   },
   {
     id: 2,
+    label: 'Tech Lavya',
     imageSrc: { mobile: Image2Mobile.src, desktop: Image2Desktop.src },
     Component: IntroSection
   },
   {
     id: 3,
+    label: 'Reunion night',
     imageSrc: { mobile: Image3Mobile.src, desktop: Image3Desktop.src },
     Component: IntroSection
   },
   {
+    id: 1,
+    label: 'ROCKING TWILIGHT',
+    imageSrc: { mobile: Image1Mobile.src, desktop: Image1Desktop.src },
+    Component: IntroSection
+  },
+  {
     id: 4,
+    label: 'SNIGDHAJIT',
     imageSrc: { mobile: Image4Mobile.src, desktop: Image4Desktop.src },
     Component: IntroSection
   },
   {
     id: 5,
+    label: 'trap music',
     imageSrc: { mobile: Image5Mobile.src, desktop: Image5Desktop.src },
     Component: IntroSection
   },
   {
     id: 6,
+    label: 'dj koyel',
     imageSrc: { mobile: Image6Mobile.src, desktop: Image6Desktop.src },
     Component: IntroSection
   },
   {
     id: 7,
+    label: 'the octaves',
     imageSrc: { mobile: Image7Mobile.src, desktop: Image7Desktop.src },
     Component: IntroSection
   },
   {
     id: 8,
+    label: 'cho nach',
     imageSrc: { mobile: Image8Mobile.src, desktop: Image8Desktop.src },
     Component: IntroSection
   }
-  // {
-  //   id: 9,
-  //   imageSrc: { mobile: Image8Mobile.src, desktop: Image8Desktop.src },
-  //   Component: IntroSection
-  // }
 ] as const
 
 const HeroSection = () => {
@@ -119,7 +125,7 @@ const HeroSection = () => {
     setIsUpdating(true)
   }
 
-  const isInFist = selected === 0
+  // const isInFist = selected === 0
   const isInLast = selected === images.length - 1
 
   useEffect(() => {
@@ -206,29 +212,39 @@ const HeroSection = () => {
           </div>
           <GradientHeroSection />
         </div>
-        <SelectedEventComponet />
-        <div className="z-10 flex flex-row gap-6 justify-center">
-          <button
-            className={tx(
-              'border-2 border-primary-3 text-primary-3 sm:hover:border-transparent sm:hover:text-white sm:hover:bg-primary sm:hover:scale-110 transition-all rounded-full p-1',
-              isInFist ? 'invisible' : 'visible'
-            )}
-            name={'left'}
-            disabled={isInFist}
-            onClick={() => handleChangeContent('left')}>
-            <ArrowSmallLeftIcon className="w-5 sm:w-8" />
-          </button>
-          <button
-            className={tx(
-              'border-2 border-primary-3 text-primary-3 sm:hover:border-transparent sm:hover:text-white sm:hover:bg-primary sm:hover:scale-110 transition-all rounded-full p-1',
-              isInLast ? 'invisible' : 'visible'
-            )}
-            name={'right'}
-            disabled={isInLast}
-            onClick={() => handleChangeContent('right')}>
-            <ArrowSmallRightIcon className="w-5 sm:w-8" />
-          </button>
+        <div className={'z-10'}>
+          <SelectedEventComponet />
         </div>
+
+        <div className="absolute bottom-3 z-10 text-secondary animate-bounce">
+          {!isInLast ? (
+            <ChevronDownIcon className="w-5 sm:w-7" />
+          ) : (
+            <ChevronUpIcon className="w-5 sm:w-7" />
+          )}
+        </div>
+        {/* <div className="z-10 flex flex-row gap-6 justify-center"> */}
+        {/*   <button */}
+        {/*     className={tx( */}
+        {/*       'border-2 border-primary-3 text-primary-3 sm:hover:border-transparent sm:hover:text-white sm:hover:bg-primary sm:hover:scale-110 transition-all rounded-full p-1', */}
+        {/*       isInFist ? 'invisible' : 'visible' */}
+        {/*     )} */}
+        {/*     name={'left'} */}
+        {/*     disabled={isInFist} */}
+        {/*     onClick={() => handleChangeContent('left')}> */}
+        {/*     <ArrowSmallLeftIcon className="w-5 sm:w-8" /> */}
+        {/*   </button> */}
+        {/*   <button */}
+        {/*     className={tx( */}
+        {/*       'border-2 border-primary-3 text-primary-3 sm:hover:border-transparent sm:hover:text-white sm:hover:bg-primary sm:hover:scale-110 transition-all rounded-full p-1', */}
+        {/*       isInLast ? 'invisible' : 'visible' */}
+        {/*     )} */}
+        {/*     name={'right'} */}
+        {/*     disabled={isInLast} */}
+        {/*     onClick={() => handleChangeContent('right')}> */}
+        {/*     <ArrowSmallRightIcon className="w-5 sm:w-8" /> */}
+        {/*   </button> */}
+        {/* </div> */}
       </div>
     </div>
   )

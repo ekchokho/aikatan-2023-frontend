@@ -43,9 +43,12 @@ export const IntroSection = () => {
         </h1>
       </div>
       <div>
-        <p className="text-xl sm:7xl text-center text-content">
-          Techno, Cultural Fest and Alumni Meet.
+        <p className="text-xl sm:text-3xl text-center text-content">
+          Techno, Cultural Fest and Alumni Meet
         </p>
+        {/* <p className="text-xl sm:text-2xl text-center text-content font-bold"> */}
+        {/*   5-7 <span>May</span> */}
+        {/* </p> */}
       </div>
 
       <CountDownTimerDynamic />
