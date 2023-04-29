@@ -2,7 +2,3 @@
 @use 'custom-scroll';
 @use 'loading';
 @use 'typing-animaion';
-body {
-  overscroll-behavior: contain;
-  scroll-behavior: smooth;
-}

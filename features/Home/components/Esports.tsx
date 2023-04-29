@@ -106,7 +106,7 @@ export const EsportsEventData = [
 
 const Esports = () => {
   return (
-    <div>
+    <section id={'esport-event'} className={'pt-10'}>
       <a href="#esport-event">
         <h2 className={'uppercase text-5xl sm:text-center my-10 text-content'}>
           <span className="text-sky-500 font-extrabold">Esports </span>Event
@@ -139,7 +139,7 @@ const Esports = () => {
           )
         )}
       </EventCardWrapper>
-    </div>
+    </section>
   )
 }
 

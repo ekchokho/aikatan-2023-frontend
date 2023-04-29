@@ -44,7 +44,7 @@ export const EventData = [
     shedules: [
       {
         to: '09:00AM',
-        from: '*---*',
+        from: '',
         name: 'Hackathon Question Declaration'
       },
       {

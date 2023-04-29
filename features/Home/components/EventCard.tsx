@@ -94,7 +94,7 @@ export const EventCard = ({
               )}
 
               <p
-                className=" w-max text-blue-700 hover:underline cursor-pointer"
+                className="w-max text-blue-700 hover:underline cursor-pointer"
                 onClick={() => setShowMore((prev) => !prev)}>
                 {showMore ? 'show less' : 'show more'}
               </p>

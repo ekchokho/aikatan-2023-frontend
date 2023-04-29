@@ -6,7 +6,7 @@ const common = {
   title: 'Aikatan 2.0',
   longTitle: 'Aikatan 2.0',
   desc: '',
-  logo: '',
+  logo: '/favicon.svg',
   banner: '',
   link: ''
 } as const

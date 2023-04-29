@@ -27,7 +27,7 @@ const Home: AppPage = () => {
         <div className={'w-full h-screen'}>
           <HeroSection />
         </div>
-        <div className={'z-50 flex flex-col gap-24 mb-20 mt-10'}>
+        <div className={'z-10 flex flex-col mb-20 mt-10'}>
           <EventSchedule />
           <TechLavya />
           <Esports />
@@ -36,10 +36,6 @@ const Home: AppPage = () => {
       </div>
     </>
   )
-}
-
-Home.layout = {
-  hideNavbar: true
 }
 
 export default Home

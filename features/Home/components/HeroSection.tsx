@@ -122,9 +122,7 @@ const HeroSection = () => {
           </div>
           <GradientHeroSection />
         </div>
-        <div className={'z-10'}>
-          <IntroSection />
-        </div>
+        <IntroSection />
 
         <div className="absolute bottom-3 z-10 text-secondary animate-bounce">
           <ChevronDownIcon className="w-5 sm:w-7" />

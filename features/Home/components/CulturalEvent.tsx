@@ -72,7 +72,9 @@ const CulturalEventData = [
 
 const CulturalEvent = () => {
   return (
-    <div>
+    <section
+      className={'flex flex-col gap-2 items-center pt-10'}
+      id={'event-cultural'}>
       <a href="#event-cultural">
         <h2 className={'text-5xl sm:text-center my-10 text-content'}>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-green-500 font-extrabold">
@@ -95,7 +97,24 @@ const CulturalEvent = () => {
           )
         )}
       </EventCardWrapper>
-    </div>
+      <div className={'flex flex-col gap-2 items-center my-10'}>
+        <p className="text-2xl">
+          Book your Pass{' '}
+          <span className="text-green-500 font-semibold">@899/-</span> Only
+        </p>
+        <a
+          href={
+            'https://docs.google.com/forms/d/e/1FAIpQLScwB6FMJgCbiLqHWogkUMeQdbFHLM8Hd4exIsmp-INE_quDaQ/viewform'
+          }>
+          <button
+            className={
+              'bg-blue-700 px-4 rounded-sm py-1 text-lg hover:bg-blue-900'
+            }>
+            Book Now
+          </button>
+        </a>
+      </div>
+    </section>
   )
 }
 

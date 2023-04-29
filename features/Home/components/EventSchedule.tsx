@@ -6,7 +6,7 @@ import SpotLightItem from '@/features/Home/components/SpotLightItem'
 
 const EventSchedule = () => {
   return (
-    <div>
+    <section id={'event-schedule'} className="pt-10">
       <a href="#event-schedule">
         <h2 className={'text-5xl sm:text-center my-10 text-content'}>
           <span className="text-green-500 font-semibold">EVENT </span>SCHEDULE
@@ -17,7 +17,7 @@ const EventSchedule = () => {
           <EventScheduleCard key={date} shedules={shedules} date={date} />
         ))}
       </EventCardWrapper>
-    </div>
+    </section>
   )
 }
 

@@ -1,8 +1,8 @@
-import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
 import React from 'react'
 
 import { useMousePosition } from '@/hooks'
+import { tx } from '@twind/core'
 
 export const SpotLightItem = ({
   children,
@@ -14,7 +14,7 @@ export const SpotLightItem = ({
   const mousePosition = useMousePosition()
   return (
     <div
-      className={clsx(
+      className={tx(
         'h-max relative overflow-hidden border border-zinc-800 backdrop-blur bg-gray-800',
         className
       )}>
