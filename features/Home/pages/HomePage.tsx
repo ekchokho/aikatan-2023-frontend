@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Loading } from '@/components'
+import EventSchedule from '@/features/Home/components/EventSchedule'
 import { AppPage } from '@/types'
 import { useProgress } from '@react-three/drei'
 import { tx } from '@twind/core'
@@ -17,19 +18,19 @@ const Home: AppPage = () => {
       {!isCompelted && <Loading />}
       <div
         className={tx(
-          'flex-1 flex flex-col',
+          'flex-1 flex flex-col px-3',
           isCompelted ? 'visible' : 'invisible'
         )}>
-        <HeroSection />
-        {/* <div className="text-7xl">hhh</div> */}
+        <div className={'w-full h-screen'}>
+          <HeroSection />
+        </div>
+        <EventSchedule />
       </div>
     </>
   )
 }
 
 Home.layout = {
-  hideFooter: true,
-  pageClassName: 'px-3',
   hideNavbar: true
 }
 

@@ -65,7 +65,8 @@ export default defineConfig({
       },
       fontFamily: {
         roboto: ['var(--font-roboto)', 'sans-serif'],
-        'bengali-noto-sans': ['var(--font-bengali-noto-sans)', 'sans-serif']
+        'bengali-noto-sans': ['var(--font-bengali-noto-sans)', 'sans-serif'],
+        'sigmar-one': ['var(--font-sigmar-one)', 'sans-serif']
       }
     }
   }

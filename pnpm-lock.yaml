@@ -5,6 +5,7 @@ specifiers:
   '@babel/plugin-syntax-flow': ^7.18.6
   '@babel/plugin-transform-react-jsx': ^7.21.0
   '@heroicons/react': ^2.0.17
+  '@radix-ui/react-icons': ^1.3.0
   '@react-three/drei': ^9.61.3
   '@react-three/fiber': ^8.12.0
   '@twind/core': ^1.1.3
@@ -45,6 +46,7 @@ specifiers:
   pretty-quick: ^3.1.3
   react: 18.2.0
   react-dom: 18.2.0
+  react-icons: ^4.8.0
   sass: ^1.60.0
   three: ^0.151.2
   twind: ^0.16.19
@@ -52,6 +54,7 @@ specifiers:
 
 dependencies:
   '@heroicons/react': 2.0.17_react@18.2.0
+  '@radix-ui/react-icons': 1.3.0_react@18.2.0
   '@react-three/drei': 9.62.2_rux6wpbn3dc5pm25cuo5l3d4py
   '@react-three/fiber': 8.12.0_42od2y7wbz57ukb7jorrhqe6ja
   '@twind/core': 1.1.3_typescript@4.9.5
@@ -69,6 +72,7 @@ dependencies:
   nextjs-progressbar: 0.0.16_next@13.2.4+react@18.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-icons: 4.8.0_react@18.2.0
   three: 0.151.3
   twind: 0.16.19_typescript@4.9.5
 
@@ -1722,6 +1726,14 @@ packages:
       tiny-glob: 0.2.9
       tslib: 2.5.0
     dev: true
+
+  /@radix-ui/react-icons/1.3.0_react@18.2.0:
+    resolution: {integrity: sha512-jQxj/0LKgp+j9BiTXz3O3sgs26RNet2iLWmsPyRz2SIcR4q/4SbazXfnYwbAr+vLYKSfc7qxzyGQA1HLlYiuNw==}
+    peerDependencies:
+      react: ^16.x || ^17.x || ^18.x
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@react-spring/animated/9.6.1_react@18.2.0:
     resolution: {integrity: sha512-ls/rJBrAqiAYozjLo5EPPLLOb1LM0lNVQcXODTC1SMtS6DbuBCPaKco5svFUQFMP2dso3O+qcC4k9FsKc0KxMQ==}
@@ -4645,6 +4657,14 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-icons/4.8.0_react@18.2.0:
+    resolution: {integrity: sha512-N6+kOLcihDiAnj5Czu637waJqSnwlMNROzVZMhfX68V/9bu9qHaMIJC4UdozWoOk57gahFCNHwVvWzm0MTzRjg==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-is/16.13.1:

@@ -21,10 +21,10 @@ import HeightMap from '@/assets/images/heightMap.png'
 import FadingImage from '@/features/Home/components/FadingImage'
 import ImageCarousel from '@/features/Home/components/ImageCarousel'
 import { useWindowSize } from '@/hooks'
-import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline'
 
 import GradientHeroSection from './GradientHeroSection'
 import { IntroSection } from './IntroSection'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 export const events = [
   {
@@ -88,10 +88,6 @@ const HeroSection = () => {
   const [selected, setSelected] = useState(0)
   const windowSize = useWindowSize()
   const isInMobile = windowSize.width < 640
-  const [isUpdating, setIsUpdating] = useState(false)
-
-  const currentSelectedEvent = events[selected]
-  const SelectedEventComponet = currentSelectedEvent.Component
 
   const images = useMemo(
     () =>
@@ -101,101 +97,24 @@ const HeroSection = () => {
     [isInMobile]
   )
 
-  const handleChangeContent = (type: 'left' | 'right') => {
-    let newSelected = selected
-    const totalImages = images.length
-
-    if (isUpdating) return
-
-    switch (type) {
-      case 'left':
-        if (selected === 0) return
-        newSelected = newSelected === 0 ? 0 : --newSelected
-        break
-      case 'right':
-        if (selected === images.length - 1) return
-        newSelected =
-          totalImages - 1 === newSelected ? totalImages - 1 : ++newSelected
-        break
-      default:
-        throw Error('not supported')
-    }
-    setDispFactor(dispFactor === 0 ? 1 : 0)
-    setSelected(newSelected)
-    setIsUpdating(true)
-  }
-
-  // const isInFist = selected === 0
-  const isInLast = selected === images.length - 1
-
   useEffect(() => {
-    if (isUpdating) {
-      const interval = setTimeout(() => {
-        setIsUpdating(false)
-      }, 300)
-      return () => clearTimeout(interval)
-    }
-  })
+    const interval = setInterval(() => {
+      setDispFactor(dispFactor === 0 ? 1 : 0)
 
-  useEffect(() => {
-    const handleScroll = (event: WheelEvent) => {
-      const wheelDeltaY = event.deltaY
-      if (isUpdating) return
-
-      if (wheelDeltaY < 0) {
-        handleChangeContent('left')
+      const arrlen = images.length
+      let current = selected
+      if (arrlen - 1 === current) {
+        current = 0
       } else {
-        handleChangeContent('right')
+        current++
       }
-    }
-
-    window.addEventListener('wheel', handleScroll)
-
-    return () => {
-      window.removeEventListener('wheel', handleScroll)
-    }
+      setSelected(current)
+    }, 5000)
+    return () => clearInterval(interval)
   })
-
-  const [startY, setStartY] = useState(0)
-  const [endY, setEndY] = useState(0)
-
-  function handleTouchStart(event: React.TouchEvent<HTMLDivElement>) {
-    setStartY(event.touches[0].clientY)
-  }
-
-  function handleTouchEnd(event: React.TouchEvent<HTMLDivElement>) {
-    setEndY(event.changedTouches[0].clientY)
-
-    // Calculate distance swiped
-    const distance = endY - startY
-
-    // Check if swipe was up or down
-    if (distance > 0) {
-      // Handle swipe down
-
-      handleChangeContent('left')
-    } else if (distance < 0) {
-      // Handle swipe up
-
-      event.preventDefault()
-      handleChangeContent('right')
-    }
-  }
 
   return (
-    <div
-      className={'w-full h-full flex-1 flex flex-col'}
-      onTouchStart={handleTouchStart}
-      onTouchMove={(event) => {
-        const { clientY } = event.touches[0]
-        const scrollTop = event.currentTarget.scrollTop
-        const isScrollingDown = scrollTop === 0 && clientY > startY
-
-        if (isScrollingDown) {
-          event.preventDefault()
-        }
-      }}
-      onTouchEnd={handleTouchEnd}>
+    <div className={'w-full h-full flex-1 flex flex-col'}>
       <div className="w-full h-full flex-1 flex flex-col items-center justify-center gap-10">
         <div className="absolute w-full h-full top-0 left-0 overflow-hidden">
           <div className="absolute w-full h-full">
@@ -213,38 +132,12 @@ const HeroSection = () => {
           <GradientHeroSection />
         </div>
         <div className={'z-10'}>
-          <SelectedEventComponet />
+          <IntroSection />
         </div>
 
         <div className="absolute bottom-3 z-10 text-secondary animate-bounce">
-          {!isInLast ? (
-            <ChevronDownIcon className="w-5 sm:w-7" />
-          ) : (
-            <ChevronUpIcon className="w-5 sm:w-7" />
-          )}
+          <ChevronDownIcon className="w-5 sm:w-7" />
         </div>
-        {/* <div className="z-10 flex flex-row gap-6 justify-center"> */}
-        {/*   <button */}
-        {/*     className={tx( */}
-        {/*       'border-2 border-primary-3 text-primary-3 sm:hover:border-transparent sm:hover:text-white sm:hover:bg-primary sm:hover:scale-110 transition-all rounded-full p-1', */}
-        {/*       isInFist ? 'invisible' : 'visible' */}
-        {/*     )} */}
-        {/*     name={'left'} */}
-        {/*     disabled={isInFist} */}
-        {/*     onClick={() => handleChangeContent('left')}> */}
-        {/*     <ArrowSmallLeftIcon className="w-5 sm:w-8" /> */}
-        {/*   </button> */}
-        {/*   <button */}
-        {/*     className={tx( */}
-        {/*       'border-2 border-primary-3 text-primary-3 sm:hover:border-transparent sm:hover:text-white sm:hover:bg-primary sm:hover:scale-110 transition-all rounded-full p-1', */}
-        {/*       isInLast ? 'invisible' : 'visible' */}
-        {/*     )} */}
-        {/*     name={'right'} */}
-        {/*     disabled={isInLast} */}
-        {/*     onClick={() => handleChangeContent('right')}> */}
-        {/*     <ArrowSmallRightIcon className="w-5 sm:w-8" /> */}
-        {/*   </button> */}
-        {/* </div> */}
       </div>
     </div>
   )

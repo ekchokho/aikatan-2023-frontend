@@ -28,28 +28,23 @@ export const IntroSection = () => {
           />
         </div>
         <div
-          className={'w-52 sm:w-full sm:max-w-sm h-full scale-125 opacity-90'}>
+          className={'w-52 sm:w-full sm:max-w-sm h-full scale-150 opacity-90'}>
           <img
             src={NeonEffect.src}
             alt="aikatan 2.0 logo"
             className={'w-full h-full animate-spin'}
           />
         </div>
-        {/* <div className="absolute w-32 h-32 bg-gray-300 rounded-full"></div> */}
       </div>
-      <div className="z-20 typewriter font-bengali-noto-sans text-2xl sm:text-5xl font-semibold text-amber-400">
-        <h1 className={'border-r-4 border-amber-400 px-2'}>
-          #এক ধনুকে পঞ্চবাণ
-        </h1>
+      <div className="z-20 typewriter font-bengali-noto-sans text-3xl sm:text-5xl font-semibold text-amber-400">
+        <p className={'border-r-4 border-amber-400 px-2'}>#এক ধনুকে পঞ্চবাণ</p>
       </div>
-      <div>
-        <p className="text-xl sm:text-3xl text-center text-content">
-          Techno, Cultural Fest and Alumni Meet
-        </p>
-        {/* <p className="text-xl sm:text-2xl text-center text-content font-bold"> */}
-        {/*   5-7 <span>May</span> */}
-        {/* </p> */}
-      </div>
+      <h1 className="text-center text-lg sm:text-3xl text-content font-semibold">
+        Get ready to experience a world of{' '}
+        <span className={'text-emerald-500 text-xl'}>Creativity</span>,{' '}
+        <span className={'text-amber-500 text-xl'}>Innovation</span> and{' '}
+        <span className={'text-sky-500 text-xl'}>Entertainment</span>!
+      </h1>
 
       <CountDownTimerDynamic />
     </div>
