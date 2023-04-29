@@ -5,10 +5,10 @@ import React from 'react'
 const common = {
   title: 'Aikatan 2.0',
   longTitle: 'Aikatan 2.0',
-  desc: '',
+  desc: 'Get ready to experience a world of Creativity, Innovation and Entertainment',
   logo: '/favicon.svg',
-  banner: '',
-  link: ''
+  banner: '/favicon.svg',
+  link: 'https://www.aikatan.org.in/'
 } as const
 
 const seoConfig: DefaultSeoProps = {
