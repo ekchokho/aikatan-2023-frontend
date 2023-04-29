@@ -53,7 +53,7 @@ const Navbar = () => {
     <Disclosure
       as="nav"
       className={tx(
-        'shadow backdrop-filter backdrop-blur bg-gray-900 bg-opacity-70 sticky top-0 w-full px-5 z-50'
+        'shadow backdrop-filter backdrop-blur bg-gray-900 bg-opacity-70 fixed top-0 w-full px-5 z-50'
       )}>
       {({ open, close }) => (
         <>
