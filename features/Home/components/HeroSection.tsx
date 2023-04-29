@@ -21,65 +21,56 @@ import HeightMap from '@/assets/images/heightMap.png'
 import FadingImage from '@/features/Home/components/FadingImage'
 import ImageCarousel from '@/features/Home/components/ImageCarousel'
 import { useWindowSize } from '@/hooks'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 import GradientHeroSection from './GradientHeroSection'
-import { IntroSection } from './IntroSection'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import IntroSection from './IntroSection'
 
 export const events = [
   {
     id: 0,
     label: 'college',
-    imageSrc: { mobile: Image0.src, desktop: Image0.src },
-    Component: IntroSection
+    imageSrc: { mobile: Image0.src, desktop: Image0.src }
   },
   {
     id: 2,
     label: 'Tech Lavya',
-    imageSrc: { mobile: Image2Mobile.src, desktop: Image2Desktop.src },
-    Component: IntroSection
+    imageSrc: { mobile: Image2Mobile.src, desktop: Image2Desktop.src }
   },
   {
     id: 3,
     label: 'Reunion night',
-    imageSrc: { mobile: Image3Mobile.src, desktop: Image3Desktop.src },
-    Component: IntroSection
+    imageSrc: { mobile: Image3Mobile.src, desktop: Image3Desktop.src }
   },
   {
     id: 1,
     label: 'ROCKING TWILIGHT',
-    imageSrc: { mobile: Image1Mobile.src, desktop: Image1Desktop.src },
-    Component: IntroSection
+    imageSrc: { mobile: Image1Mobile.src, desktop: Image1Desktop.src }
   },
   {
     id: 4,
     label: 'SNIGDHAJIT',
-    imageSrc: { mobile: Image4Mobile.src, desktop: Image4Desktop.src },
-    Component: IntroSection
+    imageSrc: { mobile: Image4Mobile.src, desktop: Image4Desktop.src }
   },
   {
     id: 5,
     label: 'trap music',
-    imageSrc: { mobile: Image5Mobile.src, desktop: Image5Desktop.src },
-    Component: IntroSection
+    imageSrc: { mobile: Image5Mobile.src, desktop: Image5Desktop.src }
   },
   {
     id: 6,
     label: 'dj koyel',
-    imageSrc: { mobile: Image6Mobile.src, desktop: Image6Desktop.src },
-    Component: IntroSection
+    imageSrc: { mobile: Image6Mobile.src, desktop: Image6Desktop.src }
   },
   {
     id: 7,
     label: 'the octaves',
-    imageSrc: { mobile: Image7Mobile.src, desktop: Image7Desktop.src },
-    Component: IntroSection
+    imageSrc: { mobile: Image7Mobile.src, desktop: Image7Desktop.src }
   },
   {
     id: 8,
     label: 'cho nach',
-    imageSrc: { mobile: Image8Mobile.src, desktop: Image8Desktop.src },
-    Component: IntroSection
+    imageSrc: { mobile: Image8Mobile.src, desktop: Image8Desktop.src }
   }
 ] as const
 
@@ -116,7 +107,7 @@ const HeroSection = () => {
   return (
     <div className={'w-full h-full flex-1 flex flex-col'}>
       <div className="w-full h-full flex-1 flex flex-col items-center justify-center gap-10">
-        <div className="absolute w-full h-full top-0 left-0 overflow-hidden">
+        <div className="absolute w-full h-full top-0 left-0">
           <div className="absolute w-full h-full">
             <ImageCarousel>
               <FadingImage

@@ -1,7 +1,10 @@
 import React from 'react'
 
 import { Loading } from '@/components'
+import CulturalEvent from '@/features/Home/components/CulturalEvent'
+import Esports from '@/features/Home/components/Esports'
 import EventSchedule from '@/features/Home/components/EventSchedule'
+import TechLavya from '@/features/Home/components/TechLavya'
 import { AppPage } from '@/types'
 import { useProgress } from '@react-three/drei'
 import { tx } from '@twind/core'
@@ -24,7 +27,12 @@ const Home: AppPage = () => {
         <div className={'w-full h-screen'}>
           <HeroSection />
         </div>
-        <EventSchedule />
+        <div className={'z-50 flex flex-col gap-24 mb-20 mt-10'}>
+          <EventSchedule />
+          <TechLavya />
+          <Esports />
+          <CulturalEvent />
+        </div>
       </div>
     </>
   )

@@ -23,6 +23,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.57.0
   '@typescript-eslint/parser': ^5.57.0
   axios: 1.3.4
+  clsx: ^1.2.1
   eslint: ^8.36.0
   eslint-config-next: ^13.2.4
   eslint-config-prettier: ^8.8.0
@@ -64,6 +65,7 @@ dependencies:
   '@twind/preset-tailwind': 1.1.4_3zgnruiul6lsk2vdq6ajg5kdh4
   '@twind/with-next': 1.2.2_vzp6fvqchzdfgbjitnz4j5sf2i
   axios: 1.3.4
+  clsx: 1.2.1
   framer-motion: 10.10.0_biqbaboplfbrettd7655fr4n2y
   gsap: 3.11.5
   install: 0.13.0
@@ -2559,6 +2561,11 @@ packages:
 
   /client-only/0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
+    dev: false
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
     dev: false
 
   /color-convert/1.9.3:
