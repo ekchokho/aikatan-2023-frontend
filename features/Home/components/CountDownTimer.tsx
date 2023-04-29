@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
 
-import { START_DATE_OF_FEST } from '@/constant'
+import { START_DATE_OF_FEST } from '@/data'
 import { calculateTimeLeft } from '@/features/Home/utils'
 import { objectKeys } from '@/utils'
 
