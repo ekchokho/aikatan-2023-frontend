@@ -54,16 +54,14 @@ const Navbar = () => {
     <Disclosure as="nav" className={tx('fixed w-full z-50')}>
       {({ open, close }) => (
         <SpotLightItem
-          className={
-            'fixed border-0 bg-transparent w-full px-5 2xl:py-1 top-0'
-          }>
+          className={'fixed border-0 bg-transparent w-full px-5 top-0 py-2'}>
           <div className={tx('py-1 max-w-7xl mx-auto')}>
             <div className={'flex items-center justify-between w-full'}>
               <div className="flex items-center justify-between w-full">
                 <Link
                   href={'/'}
-                  className="flex-shrink-0 text-xl font-bold focus:outline-none focus:ring px-3 py-2 rounded-sm">
-                  Aikatan2.0
+                  className="flex-shrink-0 text-xl sm:text-2xl 2xl:text-3xl font-extrabold focus:outline-none focus:ring px-3 rounded-sm">
+                  <span className={'font-bengali-noto-sans'}>ঐক</span>tan2.0
                 </Link>
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-center space-x-4">

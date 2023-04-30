@@ -5,7 +5,7 @@ const Loading = () => {
     <div className="loading-wrapper flex items-center justify-center bg-gray-900 z-50">
       <div className="relative">
         <div className="absolute text-center text-base sm:text-xl text-gray-400 top-1/2 w-full -translate-y-1/2 font-semibold">
-          Aikatan2.0
+          <span className={'font-bengali-noto-sans'}>ঐক</span>tan2.0
         </div>
         <div className="loading-content w-32 h-32 sm:w-36 sm:h-36"></div>
       </div>
