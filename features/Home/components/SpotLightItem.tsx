@@ -15,7 +15,7 @@ export const SpotLightItem = ({
   return (
     <div
       className={tx(
-        'h-max relative overflow-hidden border border-zinc-800 backdrop-blur bg-gray-800',
+        'h-max relative border border-zinc-800 backdrop-blur bg-gray-800',
         className
       )}>
       <AnimatePresence>

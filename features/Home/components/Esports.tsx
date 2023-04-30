@@ -12,21 +12,6 @@ import EventCardWrapper from './EventCardWrapper'
 
 export const EsportsEventData = [
   {
-    id: '1',
-    imgSrc: FIFA.src,
-    name: 'FIFA-18',
-    description: `Join the FIFA-18 e sports competition in college and compete against the best players in the state. This is your chance to represent your college and make a name for yourself in the gaming world. With exciting prizes up for grabs. Don't miss out on this incredible opportunity to be a part of the FIFA-18 esports craze!`,
-    time: '',
-    register_link:
-      'https://docs.google.com/forms/d/e/1FAIpQLSegacye9rhbAOSjv4zq6l1Erm-HUDl6bzSuYmr8NDANvWBHAA/viewform',
-    contact: [],
-    rules: '',
-    prizes: {
-      winner: '',
-      runner_up: ''
-    }
-  },
-  {
     id: '2',
     rules: '',
     imgSrc: FreeFire.src,
@@ -50,6 +35,21 @@ export const EsportsEventData = [
     time: '',
     register_link: 'https://forms.gle/vPjsmEMiYf2w6a9VA',
     contact: [],
+    prizes: {
+      winner: '',
+      runner_up: ''
+    }
+  },
+  {
+    id: '1',
+    imgSrc: FIFA.src,
+    name: 'FIFA-18',
+    description: `Join the FIFA-18 e sports competition in college and compete against the best players in the state. This is your chance to represent your college and make a name for yourself in the gaming world. With exciting prizes up for grabs. Don't miss out on this incredible opportunity to be a part of the FIFA-18 esports craze!`,
+    time: '',
+    register_link:
+      'https://docs.google.com/forms/d/e/1FAIpQLSegacye9rhbAOSjv4zq6l1Erm-HUDl6bzSuYmr8NDANvWBHAA/viewform',
+    contact: [],
+    rules: '',
     prizes: {
       winner: '',
       runner_up: ''
@@ -108,7 +108,10 @@ const Esports = () => {
   return (
     <section id={'esport-event'} className={'pt-10'}>
       <a href="#esport-event">
-        <h2 className={'uppercase text-5xl sm:text-center my-10 text-content'}>
+        <h2
+          className={
+            'uppercase text-4xl sm:text-5xl sm:text-center my-10 text-content'
+          }>
           <span className="text-sky-500 font-extrabold">Esports </span>Event
         </h2>
       </a>

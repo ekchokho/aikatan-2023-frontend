@@ -1,4 +1,3 @@
-import { Link } from 'components'
 import React, { Fragment, useMemo } from 'react'
 
 import { Disclosure, Menu, Transition } from '@headlessui/react'
@@ -15,8 +14,8 @@ export type NavigationItem = {
 
 const navigation: Record<string, Array<NavigationItem>> = {
   home: [
-    { label: 'Home', to: '/' },
-    { label: 'Schedule', to: '/#event-schedule' },
+    { label: 'Home', to: '#home' },
+    { label: 'Schedule', to: '#event-schedule' },
     {
       label: 'Events',
       to: '',
@@ -24,20 +23,20 @@ const navigation: Record<string, Array<NavigationItem>> = {
       menus: [
         {
           label: 'TechLavya',
-          to: '/#tech-event'
+          to: '#tech-event'
         },
         {
           label: 'Esports',
-          to: '/#esport-event'
+          to: '#esport-event'
         },
         {
           label: 'Cultural',
-          to: '/#event-cultural'
+          to: '#event-cultural'
         }
       ]
     },
-    { label: 'Sponsers', to: '/#sponser' },
-    { label: 'Contact Us', to: '/contact' }
+    { label: 'Sponsers', to: '#partner-sponsor' },
+    { label: 'Contact Us', to: '#contact-us' }
   ],
   auth: []
 }
@@ -53,19 +52,18 @@ const Navbar = () => {
     <Disclosure
       as="nav"
       className={tx(
-        'shadow backdrop-filter backdrop-blur bg-gray-900 bg-opacity-70 fixed top-0 w-full px-5 z-50'
+        'backdrop-filter backdrop-blur fixed top-0 w-full px-5 z-50 py-1'
       )}>
       {({ open, close }) => (
         <>
           <div className={tx('py-1 max-w-7xl mx-auto')}>
-            <div className={'flex items-center justify-between h-14'}>
-              <div className="flex items-center">
-                <Link
-                  prefetch={false}
+            <div className={'flex items-center justify-between w-full'}>
+              <div className="flex items-center justify-between w-full">
+                <a
                   href={'/'}
                   className="flex-shrink-0 text-xl font-bold focus:outline-none focus:ring px-3 py-2 rounded-sm">
-                  Aikatan
-                </Link>
+                  Aikatan2.0
+                </a>
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-center space-x-4">
                     {nav.map((item) =>
@@ -98,10 +96,9 @@ const Navbar = () => {
                                     className="focus:ring">
                                     {({ active }) => {
                                       return (
-                                        <Link
+                                        <a
                                           key={item.label}
                                           href={item.to}
-                                          scroll={true}
                                           className={tx(
                                             'block relative bg-black  hover:bg-opacity-10 text-zinc-900 px-3 py-2 text-base transition-colors focus:outline-none',
                                             active
@@ -109,7 +106,7 @@ const Navbar = () => {
                                               : 'bg-opacity-0'
                                           )}>
                                           {item.label}
-                                        </Link>
+                                        </a>
                                       )
                                     }}
                                   </Menu.Item>
@@ -119,11 +116,9 @@ const Navbar = () => {
                           </Transition>
                         </Menu>
                       ) : (
-                        <Link
+                        <a
                           key={item.label}
                           href={item.to}
-                          scroll={true}
-                          activeClassName="bg-white bg-opacity-10"
                           className="relative hover:bg-white hover:bg-opacity-10 text-white px-3 py-2 rounded-md text-base font-medium transition-colors focus:outline-none focus:ring">
                           {item.label}
                           {item.new && (
@@ -131,7 +126,7 @@ const Navbar = () => {
                               NEW
                             </span>
                           )}
-                        </Link>
+                        </a>
                       )
                     )}
                   </div>
@@ -165,24 +160,20 @@ const Navbar = () => {
                     </div>
 
                     {item.menus.map((item) => (
-                      <Link
+                      <a
                         key={item.label}
                         href={item.to}
-                        scroll={true}
                         onClick={() => close()}
-                        activeClassName="bg-zinc-700 bg-opacity-60 text-white"
                         className="text-zinc-300 hover:bg-zinc-700 hover:bg-opacity-90 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                         {item.label}
-                      </Link>
+                      </a>
                     ))}
                   </div>
                 ) : (
-                  <Link
-                    scroll={true}
+                  <a
                     key={item.label}
                     href={item.to}
                     onClick={() => close()}
-                    activeClassName="bg-zinc-700 bg-opacity-60 text-white"
                     className="flex items-center text-zinc-300 hover:bg-zinc-700 hover:bg-opacity-90 hover:text-white px-3 py-2 rounded-md text-base font-medium">
                     <div className="flex-1">{item.label}</div>
                     {item.new && (
@@ -190,7 +181,7 @@ const Navbar = () => {
                         NEW
                       </div>
                     )}
-                  </Link>
+                  </a>
                 )
               )}
             </div>

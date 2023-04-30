@@ -112,7 +112,7 @@ export const EventCard = ({
               </a>
             )}
             {rulesLink && (
-              <a href={rulesLink}>
+              <a href={rulesLink} target={'_blank'} rel="noreferrer">
                 <button
                   className={
                     'border border-blue-700 text-blue-700 bg-sky-100 px-4 rounded-sm py-1 text-lg hover:bg-blue-200 hover:text-blue-700'

@@ -22,8 +22,7 @@ const IntroSection = () => {
             className={'h-full w-full'}
           />
         </div>
-        <div
-          className={'w-52 sm:w-full sm:max-w-sm h-full scale-150 opacity-90'}>
+        <div className={'w-48 sm:w-80 sm:max-w-sm h-full scale-150 opacity-90'}>
           <img
             src={NeonEffect.src}
             alt="aikatan 2.0 logo"

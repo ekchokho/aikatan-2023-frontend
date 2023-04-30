@@ -1,9 +1,11 @@
 import React from 'react'
 
 import { Loading } from '@/components'
+import ContactUs from '@/features/Home/components/ContactUs'
 import CulturalEvent from '@/features/Home/components/CulturalEvent'
 import Esports from '@/features/Home/components/Esports'
 import EventSchedule from '@/features/Home/components/EventSchedule'
+import SponserShip from '@/features/Home/components/SponserShip'
 import TechLavya from '@/features/Home/components/TechLavya'
 import { AppPage } from '@/types'
 import { useProgress } from '@react-three/drei'
@@ -32,6 +34,8 @@ const Home: AppPage = () => {
           <TechLavya />
           <Esports />
           <CulturalEvent />
+          <SponserShip />
+          <ContactUs />
         </div>
       </div>
     </>

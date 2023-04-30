@@ -3,9 +3,11 @@ import { DefaultSeo, DefaultSeoProps, NextSeo, NextSeoProps } from 'next-seo'
 import React from 'react'
 
 const common = {
-  title: 'Aikatan 2.0',
-  longTitle: 'Aikatan 2.0',
-  desc: 'Get ready to experience a world of Creativity, Innovation and Entertainment',
+  title:
+    'Aikatan 2.0 - Get ready to experience a world of Creativity Innovation Entertainment.',
+  longTitle:
+    'Aikatan 2.0 - Get ready to experience a world of Creativity Innovation Entertainment..',
+  desc: 'Aikatan 2.0 - Get ready to experience a world of Creativity Innovation Entertainment. Presented By Ramkrishna Mahato Government Engineering College.',
   logo: '/favicon.svg',
   banner: '/favicon.svg',
   link: 'https://www.aikatan.org.in/'

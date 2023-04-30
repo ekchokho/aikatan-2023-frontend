@@ -21,52 +21,55 @@ const CulturalEventData = [
   //   location: ''
   // },
   {
-    id: 2,
-    description: '',
-    title: 'Rocking Twilight',
-    imgSrc: RockingTwilight.src,
-    time: '',
-    location: ''
-  },
-  {
-    id: 3,
-    description: '',
-    title: 'Snigdhajit',
-    imgSrc: Snigdhajit.src,
-    time: '',
-    location: ''
-  },
-  {
-    id: 4,
-    description: '',
-    title: 'Trap Music',
-    imgSrc: TrapMusic.src,
-    time: '',
-    location: ''
-  },
-  {
-    id: 5,
-    description: '',
-    title: 'DJ koyel',
-    imgSrc: DJkoyel.src,
-    time: '',
-    location: ''
+    id: 7,
+    description:
+      'Get ready to experience the Vibrant & Rhythmic Chhou Nach, the Heritage of Purulia, with the award-winning team of Bubhan Chandra Kumar!',
+    title: 'Chhau Nach',
+    imgSrc: ChoNach.src,
+    time: 'May 5th Firday at 5 PM',
+    location: 'College Playground'
   },
   {
     id: 6,
-    description: '',
+    description: `️Harmony in Motion Team Octaves Live in Action!.Grooving to the Bengali Beats. The Octaves is going to Rocking the Stage`,
     title: 'The Octaves',
     imgSrc: TheOctaves.src,
-    time: '',
-    location: ''
+    time: '5th May Friday at 10PM',
+    location: 'College Playground'
   },
   {
-    id: 7,
-    description: '',
-    title: 'Cho Nach',
-    imgSrc: ChoNach.src,
-    time: '',
-    location: ''
+    id: 2,
+    description:
+      'Join us for a night of non-stop music, dance and entertainment that will leave you wanting more. Featuring a lineup of talented artists and performers.',
+    title: 'Rocking Twilight',
+    imgSrc: RockingTwilight.src,
+    time: 'May 6th Saturday at 5 PM',
+    location: 'College Playground'
+  },
+  {
+    id: 3,
+    description:
+      'Feel the Music Surge with Snigdhajit & Lifeline!! Get ready for a mind-blowing band performance at 2nd day of Our Aikatan2.0 that will make your heart race, your feet tap, and your soul soar to the rhythm of the music!',
+    title: 'Snigdhajit',
+    imgSrc: Snigdhajit.src,
+    time: '6th May Saturday at 10:00PM',
+    location: 'College Playground'
+  },
+  {
+    id: 4,
+    description: `Get ready to be TRAPPED in a web of radical rock! Let TRAP's - The Radical Array Project dynamic sound and vibes take you on a journey like never before.`,
+    title: 'Trap Music',
+    imgSrc: TrapMusic.src,
+    time: '7th May Sunday at 8:00PM',
+    location: 'College Playground'
+  },
+  {
+    id: 5,
+    description: `️Dance, mix, beat - Repeat! with DJ Koyel !! Get ready to move to the hottest tracks & create memories that will last a lifetime. Don't miss out on the ultimate dance extravaganza on Grand Night of Aikatan2.0`,
+    title: 'DJ koyel',
+    imgSrc: DJkoyel.src,
+    time: '7th May Sunday at 10PM',
+    location: 'College Playground'
   }
 ] as const
 
@@ -76,7 +79,8 @@ const CulturalEvent = () => {
       className={'flex flex-col gap-2 items-center pt-10'}
       id={'event-cultural'}>
       <a href="#event-cultural">
-        <h2 className={'text-5xl sm:text-center my-10 text-content'}>
+        <h2
+          className={'text-4xl sm:text-5xl sm:text-center my-10 text-content'}>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-green-500 font-extrabold">
             CULTURAL{' '}
           </span>

@@ -25,7 +25,7 @@ export const EventData = [
       {
         to: '05:00PM',
         from: '06:00PM',
-        name: 'Chau Nach'
+        name: 'Chhau Nach'
       },
       {
         to: '06:30AM',

@@ -177,7 +177,10 @@ const TechLavya = () => {
   return (
     <section className="pt-10" id={'tech-event'}>
       <a href="#tech-event">
-        <h2 className={'uppercase text-5xl sm:text-center my-10 text-content'}>
+        <h2
+          className={
+            'uppercase text-4xl sm:text-5xl sm:text-center my-10 text-content'
+          }>
           <span className="text-orange-500 font-extrabold">Techlavya </span>
           Event
         </h2>
