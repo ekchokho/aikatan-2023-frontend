@@ -13,10 +13,12 @@ type EventCardProps = {
     winner: string
     runner_up: string
   }
+  location: string
   contacts: readonly {
     name: string
     number: string
   }[]
+  limitWord: number | 'default'
 }
 
 export const EventCard = ({
@@ -27,13 +29,16 @@ export const EventCard = ({
   rulesLink,
   contacts,
   prizes,
-  time
+  time,
+  location,
+  limitWord
 }: EventCardProps) => {
   const [showMore, setShowMore] = useState(false)
 
   const paragraph = () => {
     const words = description.split(' ')
-    const wordsCount = showMore ? words.length : 21
+    const setWordsLimit = limitWord === 'default' ? 21 : limitWord
+    const wordsCount = showMore ? words.length : setWordsLimit
     return words.slice(0, wordsCount).join(' ')
   }
 
@@ -59,10 +64,8 @@ export const EventCard = ({
                       <p>
                         <b>Prizes:</b>
                       </p>
-                      {prizes.winner && <p>Winner - {prizes.winner} Rs</p>}
-                      {prizes.runner_up && (
-                        <p>RunnerUp - {prizes.runner_up} Rs</p>
-                      )}
+                      {prizes.winner && <p>Winner - {prizes.winner}</p>}
+                      {prizes.runner_up && <p>RunnerUp - {prizes.runner_up}</p>}
                     </div>
                   )}
                   {time && (
@@ -71,6 +74,15 @@ export const EventCard = ({
                         <b>Time: </b>
                       </p>
                       <p> {time}</p>
+                    </div>
+                  )}
+
+                  {location && (
+                    <div>
+                      <p>
+                        <b>Location: </b>
+                      </p>
+                      <p> {location}</p>
                     </div>
                   )}
 

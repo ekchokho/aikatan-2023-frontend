@@ -6,6 +6,7 @@ import ClashRoyale from '@/assets/events/ClashRoyale.png'
 import FIFA from '@/assets/events/Fifa.png'
 import FreeFire from '@/assets/events/freefire.png'
 import Valorant from '@/assets/events/valorant.png'
+import { YetToBeAnnounced } from '@/features/Home/components/TechLavya'
 
 import EventCard from './EventCard'
 import EventCardWrapper from './EventCardWrapper'
@@ -17,14 +18,16 @@ export const EsportsEventData = [
     imgSrc: FreeFire.src,
     name: 'FREE FIRE MAX',
     description: `Are you ready to enter the ultimate battle arena? The FREE FIRE MAX esports competition offers a opportunity to showcase your skills in a fast-paced, intense battle royale game. Don't miss out on this unique chance to elevate your gaming experience and become a legend in the world of esports. Register now and let the games begin!`,
-    time: '',
+    time: YetToBeAnnounced,
     register_link:
       'https://docs.google.com/forms/d/e/1FAIpQLSft52Xm7qPndepi40rkxPtzwB7-CeZrLkZRinlqOe0XZhPQgQ/viewform',
     contact: [],
     prizes: {
-      winner: '',
-      runner_up: ''
-    }
+      winner: YetToBeAnnounced,
+      runner_up: YetToBeAnnounced
+    },
+    location: YetToBeAnnounced,
+    limitWord: 'default'
   },
   {
     id: '3',
@@ -32,28 +35,32 @@ export const EsportsEventData = [
     name: 'BGMI',
     rules: '',
     description: `Ready to battle it out on the virtual battlegrounds? Participate in the BGMI esports competition and put your skills to the test against the best players. With thrilling gameplay and nail-biting matches, and win amazing prizes. Don't miss out on this adrenaline-fueled gaming experience and register today to be a part of the action-packed BGMI esports competition!`,
-    time: '',
+    time: YetToBeAnnounced,
     register_link: 'https://forms.gle/vPjsmEMiYf2w6a9VA',
     contact: [],
     prizes: {
-      winner: '',
-      runner_up: ''
-    }
+      winner: YetToBeAnnounced,
+      runner_up: YetToBeAnnounced
+    },
+    location: YetToBeAnnounced,
+    limitWord: 'default'
   },
   {
     id: '1',
     imgSrc: FIFA.src,
     name: 'FIFA-18',
     description: `Join the FIFA-18 e sports competition in college and compete against the best players in the state. This is your chance to represent your college and make a name for yourself in the gaming world. With exciting prizes up for grabs. Don't miss out on this incredible opportunity to be a part of the FIFA-18 esports craze!`,
-    time: '',
+    time: YetToBeAnnounced,
     register_link:
       'https://docs.google.com/forms/d/e/1FAIpQLSegacye9rhbAOSjv4zq6l1Erm-HUDl6bzSuYmr8NDANvWBHAA/viewform',
     contact: [],
     rules: '',
     prizes: {
-      winner: '',
-      runner_up: ''
-    }
+      winner: YetToBeAnnounced,
+      runner_up: YetToBeAnnounced
+    },
+    location: YetToBeAnnounced,
+    limitWord: 'default'
   },
   {
     id: '4',
@@ -62,14 +69,16 @@ export const EsportsEventData = [
     name: 'Asphalt-8',
     description:
       "Get ready to burn some rubber and dominate the track in the Asphalt-8 e sports competition. This high-octane event is the ultimate test of speed, skill, and strategy, where you'll compete against other top players in a race to the finish line. With thrilling prizes. Don't miss out on this adrenaline-fueled event. Register now and start your engines!",
-    time: '',
+    time: YetToBeAnnounced,
     register_link:
       'https://docs.google.com/forms/d/e/1FAIpQLSendeWNEt5Oq80SsKw0zxh1Y0-pXb6Ixo-woge6-zBxb4Ta0Q/viewform',
     contact: [],
     prizes: {
-      winner: '',
-      runner_up: ''
-    }
+      winner: YetToBeAnnounced,
+      runner_up: YetToBeAnnounced
+    },
+    location: YetToBeAnnounced,
+    limitWord: 'default'
   },
   {
     id: '5',
@@ -78,14 +87,16 @@ export const EsportsEventData = [
     name: 'Valorant',
     description:
       'Are you ready to unleash your tactical prowess and become a champion in the world of Valorant? Join the Valorant esports competition and compete against other skilled players. With thrilling gameplay and unique character abilities, this game is perfect for those who love strategy and teamwork. Register today and take the first step towards becoming a Valorant legend!',
-    time: '',
+    time: YetToBeAnnounced,
     register_link:
       'https://docs.google.com/forms/d/e/1FAIpQLSd9TGrcR6G-9CMjn8pUZoYFk2b7x9Deatg2_pq3OPdpWcNCcw/viewform',
     contact: [],
     prizes: {
-      winner: '',
-      runner_up: ''
-    }
+      winner: YetToBeAnnounced,
+      runner_up: YetToBeAnnounced
+    },
+    location: YetToBeAnnounced,
+    limitWord: 'default'
   },
   {
     id: '6',
@@ -93,16 +104,18 @@ export const EsportsEventData = [
     imgSrc: ClashRoyale.src,
     name: 'Clash Royale',
     description: `Get ready to clash with the best players in college esports! The Clash Royale competition is coming to campus, and it's time to show off your skills. Battle it out in this fast-paced strategy game for a chance to win exciting prizes. Don't miss your chance to compete in one of the hottest esports games around. Register today and get ready to clash!`,
-    time: '',
+    time: YetToBeAnnounced,
     register_link:
       'https://docs.google.com/forms/d/e/1FAIpQLSci4aLKOmNEzxflT76JzPnCB_MosXDzGK6IJ6bm08t5_OgmfQ/viewform',
     contact: [],
     prizes: {
-      winner: '',
-      runner_up: ''
-    }
+      winner: YetToBeAnnounced,
+      runner_up: YetToBeAnnounced
+    },
+    location: YetToBeAnnounced,
+    limitWord: 'default'
   }
-]
+] as const
 
 const Esports = () => {
   return (
@@ -126,9 +139,12 @@ const Esports = () => {
             contact,
             prizes,
             rules,
-            time
+            time,
+            location,
+            limitWord
           }) => (
             <EventCard
+              location={location}
               key={id}
               imgSrc={imgSrc}
               registrationLink={register_link}
@@ -138,6 +154,7 @@ const Esports = () => {
               prizes={prizes}
               rulesLink={rules}
               contacts={contact}
+              limitWord={limitWord}
             />
           )
         )}
