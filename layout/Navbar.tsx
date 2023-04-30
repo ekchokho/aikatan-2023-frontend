@@ -54,7 +54,9 @@ const Navbar = () => {
     <Disclosure as="nav" className={tx('fixed w-full z-50')}>
       {({ open, close }) => (
         <SpotLightItem
-          className={'fixed border-0 bg-transparent w-full px-5 top-0 py-2'}>
+          className={
+            'fixed border-0 bg-transparent w-full px-5 top-0 2xl:py-2'
+          }>
           <div className={tx('py-1 max-w-7xl mx-auto')}>
             <div className={'flex items-center justify-between w-full'}>
               <div className="flex items-center justify-between w-full">
