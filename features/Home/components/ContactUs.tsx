@@ -141,7 +141,7 @@ const ContactUs = () => {
       <a href="#contact-us">
         <h2
           className={
-            'font-extrabold uppercase text-4xl sm:text-5xl sm:text-center my-10 text-content'
+            'font-extrabold uppercase text-4xl 2xl:text-5xl sm:text-center my-10 text-content'
           }>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-red-500">
             Contact{' '}

@@ -29,11 +29,14 @@ const UserProfileCard = ({
   const { fistName, lastName } = name
   return (
     <SpotLightItem className={'rounded'}>
-      <div className="w-72 px-4 rounded shadow-xl py-4 flex flex-col gap-4 items-center">
+      <div className="w-64 2xl:w-72 px-4 rounded shadow-xl py-4 flex flex-col gap-4 items-center">
         {imgSrc && (
           <div className={'p-1 rounded-full'}>
             <div className={'p-1 bg-red-500 rounded-full'}>
-              <div className={'w-40 h-40 overflow-hidden rounded-full'}>
+              <div
+                className={
+                  'w-36 h-36 2xl:w-40 2xl:h-40 overflow-hidden rounded-full'
+                }>
                 <img src={imgSrc} alt={'profile picture of' + name} />
               </div>
             </div>
@@ -41,7 +44,7 @@ const UserProfileCard = ({
         )}
         <div className="flex flex-col items-center gap-1">
           <div className="flex flex-col items-center">
-            <p className={'font-extrabold text-3xl text-rose-500'}>
+            <p className={'font-extrabold text-2xl 2xl:text-3xl text-rose-500'}>
               {fistName} {lastName}
             </p>
             <p className={'font-semibold text-lg'}>{title}</p>

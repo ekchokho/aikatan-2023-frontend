@@ -123,7 +123,7 @@ const Esports = () => {
       <a href="#esport-event">
         <h2
           className={
-            'uppercase text-4xl sm:text-5xl sm:text-center my-10 text-content'
+            'uppercase text-4xl 2xl:text-5xl sm:text-center my-10 text-content'
           }>
           <span className="text-sky-500 font-extrabold">Esports </span>Event
         </h2>

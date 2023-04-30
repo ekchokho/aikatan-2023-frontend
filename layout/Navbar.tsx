@@ -1,5 +1,7 @@
 import React, { Fragment, useMemo } from 'react'
 
+import { Link } from '@/components'
+import SpotLightItem from '@/features/Home/components/SpotLightItem'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon, XMarkIcon } from '@heroicons/react/20/solid'
 import { HamburgerMenuIcon } from '@radix-ui/react-icons'
@@ -49,21 +51,20 @@ const Navbar = () => {
   )
 
   return (
-    <Disclosure
-      as="nav"
-      className={tx(
-        'backdrop-filter backdrop-blur fixed top-0 w-full px-5 z-50 py-1'
-      )}>
+    <Disclosure as="nav" className={tx('fixed w-full z-50')}>
       {({ open, close }) => (
-        <>
+        <SpotLightItem
+          className={
+            'fixed border-0 bg-transparent w-full px-5 2xl:py-1 top-0'
+          }>
           <div className={tx('py-1 max-w-7xl mx-auto')}>
             <div className={'flex items-center justify-between w-full'}>
               <div className="flex items-center justify-between w-full">
-                <a
+                <Link
                   href={'/'}
                   className="flex-shrink-0 text-xl font-bold focus:outline-none focus:ring px-3 py-2 rounded-sm">
                   Aikatan2.0
-                </a>
+                </Link>
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-center space-x-4">
                     {nav.map((item) =>
@@ -186,7 +187,7 @@ const Navbar = () => {
               )}
             </div>
           </Disclosure.Panel>
-        </>
+        </SpotLightItem>
       )}
     </Disclosure>
   )

@@ -66,11 +66,11 @@ const Layout = ({
         {!hideNavbar && <Navbar />}
 
         <NextProgress
-          color="#8080FF"
+          color="#6366f1"
           startPosition={0.3}
           stopDelayMs={0}
           height={3}
-          showOnShallow={true}
+          showOnShallow={false}
         />
 
         <div

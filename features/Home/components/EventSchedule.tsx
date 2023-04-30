@@ -8,7 +8,7 @@ const EventSchedule = () => {
   return (
     <section id={'event-schedule'} className="pt-10">
       <a href="#event-schedule">
-        <h2 className={'text-5xl sm:text-center my-10 text-content'}>
+        <h2 className={'text-4xl 2xl:text-5xl text-center my-10 text-content'}>
           <span className="text-green-500 font-semibold">EVENT </span>SCHEDULE
         </h2>
       </a>
@@ -40,10 +40,10 @@ const EventScheduleCard = ({ date, shedules }: EventCardProps) => {
   const day = dateToString[0]
   const dayOfMonth = dateToString[2]
   return (
-    <div className="flex flex-col gap-2 w-full sm:w-80">
-      <div className="relative uppercase text-3xl">
+    <div className="flex flex-col gap-2 w-full sm:w-72 2xl:w-80">
+      <div className="relative uppercase text-2xl 2xl:text-3xl">
         <p className="top-0 text-yellow-200 font-semibold">{month}</p>
-        <p className="text-blue-500 font-black text-8xl font-sigmar-one">
+        <p className="text-blue-500 font-black text-7xl 2xl:text-8xl font-sigmar-one">
           {dayOfMonth}
         </p>
         <p className="absolute text-slate-200 z-10 bottom-0 left-0 font-bold">
@@ -58,7 +58,9 @@ const EventScheduleCard = ({ date, shedules }: EventCardProps) => {
                 <p>{to}</p>
                 <p className={'text-center'}>{from}</p>
               </div>
-              <p className="text-xl font-semibold">{name}</p>
+              <p className="text-base 2xl:font-xl font-medium 2xl:font-semibold">
+                {name}
+              </p>
             </div>
           )
         })}

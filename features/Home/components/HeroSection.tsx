@@ -105,32 +105,33 @@ const HeroSection = () => {
   })
 
   return (
-    <section id={'home'} className={'w-full h-full flex-1 flex flex-col'}>
-      <a href="#home" className={'w-full h-full flex-1 flex flex-col'}>
-        <div className="w-full h-full flex-1 flex flex-col items-center justify-center gap-10">
-          <div className="absolute w-full h-full top-0 left-0">
-            <div className="absolute w-full h-full">
-              <ImageCarousel>
-                <FadingImage
-                  dispImage={HeightMap.src}
-                  images={images}
-                  height={windowSize.height}
-                  width={windowSize.width}
-                  selected={selected}
-                  dispFactor={dispFactor}
-                />
-              </ImageCarousel>
-            </div>
-            <GradientHeroSection />
+    <section
+      id={'home'}
+      className={'w-full h-full flex-1 flex flex-col items-center'}>
+      <a
+        href="#home"
+        className="w-full h-full flex-1 flex flex-col items-center justify-center gap-10">
+        <div className="absolute w-full h-full top-0 left-0">
+          <div className="absolute w-full h-full">
+            <ImageCarousel>
+              <FadingImage
+                dispImage={HeightMap.src}
+                images={images}
+                height={windowSize.height}
+                width={windowSize.width}
+                selected={selected}
+                dispFactor={dispFactor}
+              />
+            </ImageCarousel>
           </div>
-          <IntroSection />
-
-          <a
-            href="#event-schedule"
-            className="absolute bottom-3 z-10 text-secondary animate-bounce">
-            <ChevronDownIcon className="w-5 sm:w-7" />
-          </a>
+          <GradientHeroSection />
         </div>
+        <IntroSection />
+      </a>
+      <a
+        href="#event-schedule"
+        className="absolute bottom-3 z-10 text-secondary animate-bounce">
+        <ChevronDownIcon className="w-5 sm:w-7" />
       </a>
     </section>
   )

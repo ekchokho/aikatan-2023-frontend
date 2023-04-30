@@ -80,7 +80,7 @@ const CulturalEvent = () => {
       id={'event-cultural'}>
       <a href="#event-cultural">
         <h2
-          className={'text-4xl sm:text-5xl sm:text-center my-10 text-content'}>
+          className={'text-4xl 2xl:text-5xl sm:text-center my-10 text-content'}>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-green-500 font-extrabold">
             CULTURAL{' '}
           </span>
@@ -139,13 +139,16 @@ const CulturalEventCard = ({
   title
 }: CulturalEventCardProps) => {
   return (
-    <div className={'w-full h-max sm:w-80 rounded shadow-xl overflow-hidden'}>
+    <div
+      className={
+        'w-full h-max sm:w-72 2xl:w-80 rounded shadow-xl overflow-hidden'
+      }>
       <div
         className={`bg-center bg-cover w-full h-32 overflow-auto bg-[url(${imgSrc})]`}></div>
       <SpotLightItem>
         <div className="px-4 py-5 flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <h3 className={'text-2xl font-semibold'}>{title}</h3>
+            <h3 className={'text-xl 2xl:text-2xl font-semibold'}>{title}</h3>
             <div className="text-content-medium flex flex-col gap-2">
               {description && (
                 <p className="text-content-medium">{description}</p>

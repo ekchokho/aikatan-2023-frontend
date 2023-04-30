@@ -44,7 +44,7 @@ type NumbersCardWrapperProps = {
 
 const NumbersCardWrapper = ({ heading, children }: NumbersCardWrapperProps) => {
   return (
-    <div className="flex flex-col gap-0.5 font-bold items-center">
+    <div className="flex flex-col gap-0.5 font-medium 2xl:font-semibold items-center">
       <p className="text-primary-light capitalize text-sm">{heading}</p>
       <div className="flex flex-row items-center gap-1.5">{children}</div>
     </div>
@@ -58,7 +58,7 @@ type NumberCardProps = {
 const NumberCard = ({ number }: NumberCardProps) => {
   return (
     <div className="relative bg-primary-light rounded flex items-center justify-center shadow-md shadow-secondary-dark-2/80">
-      <p className="px-2.5 py-1 sm:px-4 sm:py-2 text-lg sm:text-5xl text-secondary font-bold z-10">
+      <p className="px-2.5 py-1 sm:px-3 2xl:px-4 2xl:py-2 text-lg sm:text-2xl 2xl:4xl text-secondary font-bold z-10">
         {number}
       </p>
       <div className="invisible sm:visible w-full h-[0.6px] top-1/2 absolute bg-secondary-1" />

@@ -22,7 +22,10 @@ const IntroSection = () => {
             className={'h-full w-full'}
           />
         </div>
-        <div className={'w-48 sm:w-80 sm:max-w-sm h-full scale-150 opacity-90'}>
+        <div
+          className={
+            'w-48 sm:w-68 2xl:w-80 sm:max-w-sm h-full scale-150 opacity-90'
+          }>
           <img
             src={NeonEffect.src}
             alt="aikatan 2.0 logo"
@@ -30,23 +33,16 @@ const IntroSection = () => {
           />
         </div>
       </div>
-      <div className="z-20 typewriter font-bengali-noto-sans text-3xl sm:text-5xl font-semibold text-amber-400">
+      <div className="z-20 typewriter font-bengali-noto-sans text-2xl sm:text-4xl 2xl:text-5xl font-semibold text-amber-400">
         <p className={'border-r-4 border-amber-400 px-2'}>#এক ধনুকে পঞ্চবাণ</p>
       </div>
-      <h1 className="text-center text-lg sm:text-2xl text-content font-semibold">
+      <h1 className="text-center text-lg sm:text-xl text-content font-semibold">
         Get ready to experience a world of <br />
         <div>
-          <span className={'text-emerald-500 text-xl sm:text-4xl'}>
-            Creativity
-          </span>
-          ,{' '}
-          <span className={'text-amber-500 text-xl sm:text-4xl'}>
-            Innovation
-          </span>{' '}
+          <span className={'text-emerald-500'}>Creativity</span>,{' '}
+          <span className={'text-amber-500 font-extrabold'}>Innovation</span>{' '}
           and{' '}
-          <span className={'text-sky-500 text-xl sm:text-3xl'}>
-            Entertainment
-          </span>
+          <span className={'text-sky-500 font-extrabold'}>Entertainment</span>
         </div>
       </h1>
 

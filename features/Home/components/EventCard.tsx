@@ -43,14 +43,17 @@ export const EventCard = ({
   }
 
   return (
-    <div className={'w-full h-max sm:w-80 rounded shadow-xl overflow-hidden'}>
+    <div
+      className={
+        'w-full h-max sm:w-72 2xl:w-80 rounded shadow-xl overflow-hidden'
+      }>
       <div
         className={`bg-center bg-cover w-full h-32 overflow-auto bg-[url(${imgSrc})]`}></div>
 
       <SpotLightItem>
         <div className="px-4 py-5 flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <h3 className={'text-3xl font-semibold'}>{heading}</h3>
+            <h3 className={'text-xl 2xl:text-2xl font-semibold'}>{heading}</h3>
 
             <div className="text-content-medium flex flex-col gap-2">
               <p>
@@ -117,7 +120,7 @@ export const EventCard = ({
               <a href={registrationLink}>
                 <button
                   className={
-                    'bg-blue-700 px-4 rounded-sm py-1 text-lg hover:bg-blue-900'
+                    'bg-blue-700 rounded-sm px-3 2xl:px-4 py-0.5 2xl:py-1 2xl:text-lg hover:bg-blue-900'
                   }>
                   Register
                 </button>
@@ -127,7 +130,7 @@ export const EventCard = ({
               <a href={rulesLink} target={'_blank'} rel="noreferrer">
                 <button
                   className={
-                    'border border-blue-700 text-blue-700 bg-sky-100 px-4 rounded-sm py-1 text-lg hover:bg-blue-200 hover:text-blue-700'
+                    'border border-blue-700 text-blue-700 bg-sky-100 rounded-sm px-3 2xl:px-4 py-0.5 2xl:py-1hover:bg-blue-200 hover:text-blue-700'
                   }>
                   Rules
                 </button>

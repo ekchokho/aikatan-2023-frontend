@@ -73,7 +73,7 @@ export const TechLavyaEvents = [
   },
   {
     id: '3',
-    limitWord: 15,
+    limitWord: 16,
     name: 'HACK-VENGERS',
     topic: 'Hackathon',
     imgSrc: Hackthon.src,
@@ -193,7 +193,7 @@ const TechLavya = () => {
       <a href="#tech-event">
         <h2
           className={
-            'uppercase text-4xl sm:text-5xl sm:text-center my-10 text-content'
+            'uppercase text-4xl 2xl:text-5xl sm:text-center my-10 text-content'
           }>
           <span className="text-orange-500 font-extrabold">Techlavya </span>
           Event
