@@ -22,7 +22,8 @@ const Link = ({
 
   return (
     <NextLink
-      href={href || ''}
+      href={href}
+      scroll={typeof href === 'string' && href.substring(0, 2) !== '/#'}
       prefetch={prefetch}
       className={finalClassName}
       {...props}>

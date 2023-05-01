@@ -16,8 +16,8 @@ export type NavigationItem = {
 
 const navigation: Record<string, Array<NavigationItem>> = {
   home: [
-    { label: 'Home', to: '#home' },
-    { label: 'Schedule', to: '#event-schedule' },
+    { label: 'Home', to: '/#home' },
+    { label: 'Schedule', to: '/#event-schedule' },
     {
       label: 'Events',
       to: '',
@@ -25,25 +25,26 @@ const navigation: Record<string, Array<NavigationItem>> = {
       menus: [
         {
           label: 'TechLavya',
-          to: '#tech-event'
+          to: '/#tech-event'
         },
         {
           label: 'Esports',
-          to: '#esport-event'
+          to: '/#esport-event'
         },
         {
           label: 'Cultural',
-          to: '#event-cultural'
+          to: '/#event-cultural'
         }
       ]
     },
-    { label: 'Gallary', to: '#gallary' },
+    { label: 'Gallary', to: '/#gallary' },
     {
       label: 'More',
       to: '',
       menus: [
-        { label: 'Sponsers', to: '#partner-sponsor' },
-        { label: 'Contact Us', to: '#contact-us' }
+        { label: 'Sponsers', to: '/#partner-sponsor' },
+        { label: 'Contact Us', to: '/#contact-us' },
+        { label: 'About', to: '/about' }
       ]
     }
   ],
@@ -104,7 +105,7 @@ const Navbar = () => {
                                     className="focus:ring">
                                     {({ active }) => {
                                       return (
-                                        <a
+                                        <Link
                                           key={item.label}
                                           href={item.to}
                                           className={tx(
@@ -114,7 +115,7 @@ const Navbar = () => {
                                               : 'bg-opacity-0'
                                           )}>
                                           {item.label}
-                                        </a>
+                                        </Link>
                                       )
                                     }}
                                   </Menu.Item>
@@ -124,7 +125,7 @@ const Navbar = () => {
                           </Transition>
                         </Menu>
                       ) : (
-                        <a
+                        <Link
                           key={item.label}
                           href={item.to}
                           className="relative hover:bg-white hover:bg-opacity-10 text-white px-3 py-2 rounded-md text-base font-medium transition-colors focus:outline-none focus:ring">
@@ -134,7 +135,7 @@ const Navbar = () => {
                               NEW
                             </span>
                           )}
-                        </a>
+                        </Link>
                       )
                     )}
                   </div>
@@ -168,17 +169,17 @@ const Navbar = () => {
                     </div>
 
                     {item.menus.map((item) => (
-                      <a
+                      <Link
                         key={item.label}
                         href={item.to}
                         onClick={() => close()}
                         className="text-zinc-300 hover:bg-zinc-700 hover:bg-opacity-90 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                         {item.label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 ) : (
-                  <a
+                  <Link
                     key={item.label}
                     href={item.to}
                     onClick={() => close()}
@@ -189,7 +190,7 @@ const Navbar = () => {
                         NEW
                       </div>
                     )}
-                  </a>
+                  </Link>
                 )
               )}
             </div>

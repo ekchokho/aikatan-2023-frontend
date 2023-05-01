@@ -3,11 +3,10 @@ import { DefaultSeo, DefaultSeoProps, NextSeo, NextSeoProps } from 'next-seo'
 import React from 'react'
 
 const common = {
-  title:
-    'ঐকtan2.0 - unleash your tech skills and creativity the premier college tech fest!',
+  title: 'ঐকtan2.0 - Unleash your tech skills and creativity!',
   longTitle:
     'ঐকtan2.0 - unleash your creativity and discover the latest trends in technology at Aikatan, the premier college tech fest of the year, featuring exciting competitions, inspiring talks, and hands-on workshops covering coding, robotics, gaming, design, and more.',
-  desc: `Experience the thrill of innovation at ঐকtan2.0, the ultimate college tech fest! Join us for a day of exciting events and workshops covering everything from coding to design. Don't miss out, register now and unleash your creativity!`,
+  desc: `Aikatan is the Annual Techno - Cultural fest of Ramkrishna Mahato Government Engineering College. As one of the largest Techno - Cultural fest of west bengal, It is a medium to promote technology and cultural events in young minds in order to feed an arduous Tomorrow.`,
   logo: '/favicon.svg',
   banner: '/favicon.svg',
   link: 'https://www.aikatan.org.in/'
