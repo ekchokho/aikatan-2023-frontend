@@ -4,6 +4,7 @@ import Amisha from '@/assets/members/amisha.png'
 import Gobinda from '@/assets/members/govindo.jpg'
 import Pallab from '@/assets/members/pallab.png'
 import Puspal from '@/assets/members/puspal.jpg'
+import Sagar from '@/assets/members/sagar.png'
 import Sankhadeep from '@/assets/members/sankhadeep.png'
 import Snigdha from '@/assets/members/snigdha.png'
 import { UserProfileCard } from '@/components'
@@ -44,24 +45,23 @@ export const MembersData = {
         }
       ]
     },
-    // {
-    //   id: '3',
-    //   title: 'Sponsorship T. Head',
-    //   name: { fistName: 'P', lastName: 'Sagar' },
-    //   contact_no: '9883596147',
-    //   imgSrc:
-    //     'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg',
-    //   social: [
-    //     {
-    //       id: 'facebook',
-    //       link: 'https://www.facebook.com/Ardentgroup/'
-    //     },
-    //     {
-    //       id: 'linkedin',
-    //       link: 'https://www.linkedin.com/company/ardentinternships/'
-    //     }
-    //   ]
-    // },
+    {
+      id: '3',
+      title: 'Sponsorship Head',
+      name: { fistName: 'P', lastName: 'Sagar' },
+      contact_no: '9883596147',
+      imgSrc: Sagar.src,
+      social: [
+        {
+          id: 'instagram',
+          link: 'https://www.instagram.com/_absolutely.not.dwight_'
+        },
+        {
+          id: 'linkedin',
+          link: 'https://www.linkedin.com/in/sagar-puppala-937825206'
+        }
+      ]
+    },
     {
       id: '4',
       title: 'Sponsorship',
