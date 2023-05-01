@@ -11,10 +11,15 @@ import {
 import { HiLocationMarker } from 'react-icons/hi'
 
 import ArdentComputech from '@/assets/sponsers/ardent_logo.png'
+import Bongochorcha from '@/assets/sponsers/bongochorcha.png'
+import KBCityMall from '@/assets/sponsers/city-mall.png'
+import Ekchokho from '@/assets/sponsers/ekchokho.png'
 import EventMas from '@/assets/sponsers/eventmas.png'
+import FriendsFM from '@/assets/sponsers/friends-fm.png'
 import PragatiCement from '@/assets/sponsers/pragati-cement.png'
 import Reel2Real from '@/assets/sponsers/reel2real.png'
 import SagarRajResorts from '@/assets/sponsers/sagar-raj-resorts.png'
+import SriRajharia from '@/assets/sponsers/sri-rajgharia.png'
 import TelegraphOnline from '@/assets/sponsers/telegraph.png'
 import SpotLightItem from '@/features/Home/components/SpotLightItem'
 import { tx } from '@twind/core'
@@ -130,6 +135,96 @@ const SponserShipData = [
       {
         id: 'website',
         link: 'https://pragatigranito.com/pragaticement.php'
+      },
+      {
+        id: 'facebook',
+        link: 'https://www.facebook.com/PragatiCementIndiaPvtLtd'
+      }
+    ]
+  },
+  {
+    id: 6,
+    imgSrc: KBCityMall.src,
+    description: '',
+    title: 'KB City Mall',
+    location: '',
+    type: 'Asociate Sponsor',
+    social: [
+      {
+        id: 'facebook',
+        link: 'https://www.facebook.com/kbcitymallpurulia'
+      }
+    ]
+  },
+  {
+    id: 7,
+    imgSrc: SriRajharia.src,
+    description: '',
+    title: 'Sri Rajgaria Jewel.',
+    location: '',
+    type: 'Asociate Sponsor',
+    social: [
+      {
+        id: 'facebook',
+        link: 'https://www.facebook.com/profile.php?id=100063572274391'
+      }
+    ]
+  },
+  {
+    id: 8,
+    imgSrc: FriendsFM.src,
+    description: '',
+    title: '91.9Friends FM',
+    location: '',
+    type: 'Radio Partner',
+    social: [
+      {
+        id: 'instagram',
+        link: 'https://www.instagram.com/919friendsfm/'
+      }
+    ]
+  },
+  {
+    id: 9,
+    imgSrc: Ekchokho.src,
+    description: '',
+    title: 'Ekchokho',
+    location: '',
+    type: 'Graphic Design & Content',
+    social: [
+      {
+        id: 'facebook',
+        link: 'https://www.facebook.com/ekchokhocom'
+      },
+      {
+        id: 'website',
+        link: 'https://www.ekchokho.com/'
+      }
+    ]
+  },
+  {
+    id: 10,
+    imgSrc: Bongochorcha.src,
+    description: '',
+    title: 'Bongochorcha',
+    location: '',
+    type: 'Social Media Partner',
+    social: [
+      {
+        id: 'facebook',
+        link: 'https://www.facebook.com/bongochorcha'
+      },
+      {
+        id: 'instagram',
+        link: 'https://www.instagram.com/__bongochorcha__/'
+      },
+      {
+        id: 'youtube',
+        link: 'https://www.youtube.com/channel/UCod9erptzxXoaUPgEiSSyvA'
+      },
+      {
+        id: 'website',
+        link: 'https://bongochorcha.wixsite.com/bongochorcha'
       }
     ]
   }
