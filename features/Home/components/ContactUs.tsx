@@ -123,7 +123,7 @@ export const MembersData = {
     },
     {
       id: '7',
-      title: 'Social Media',
+      title: 'Social Media & Design',
       name: { fistName: 'Gobinda', lastName: 'Gorai' },
       contact_no: '7407991983',
       imgSrc: Gobinda.src,

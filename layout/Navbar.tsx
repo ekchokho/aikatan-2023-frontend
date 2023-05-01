@@ -37,8 +37,15 @@ const navigation: Record<string, Array<NavigationItem>> = {
         }
       ]
     },
-    { label: 'Sponsers', to: '#partner-sponsor' },
-    { label: 'Contact Us', to: '#contact-us' }
+    { label: 'Gallary', to: '#gallary' },
+    {
+      label: 'More',
+      to: '',
+      menus: [
+        { label: 'Sponsers', to: '#partner-sponsor' },
+        { label: 'Contact Us', to: '#contact-us' }
+      ]
+    }
   ],
   auth: []
 }
@@ -88,7 +95,7 @@ const Navbar = () => {
                             leave="transition ease-in duration-75"
                             leaveFrom="transform opacity-100 scale-100"
                             leaveTo="transform opacity-0 scale-95">
-                            <Menu.Items className="origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white focus:outline-none">
+                            <Menu.Items className="origin-top-left absolute left-0 mt-2 w-max rounded-md shadow-lg bg-gray-800 focus:outline-none">
                               <div className="py-1">
                                 {item.menus.map((item) => (
                                   <Menu.Item
@@ -101,7 +108,7 @@ const Navbar = () => {
                                           key={item.label}
                                           href={item.to}
                                           className={tx(
-                                            'block relative bg-black  hover:bg-opacity-10 text-zinc-900 px-3 py-2 text-base transition-colors focus:outline-none',
+                                            'block relative bg-black  hover:bg-gray-700 text-white px-3 py-2 text-base transition-colors focus:outline-none',
                                             active
                                               ? 'bg-opacity-10'
                                               : 'bg-opacity-0'

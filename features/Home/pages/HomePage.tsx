@@ -5,6 +5,7 @@ import ContactUs from '@/features/Home/components/ContactUs'
 import CulturalEvent from '@/features/Home/components/CulturalEvent'
 import Esports from '@/features/Home/components/Esports'
 import EventSchedule from '@/features/Home/components/EventSchedule'
+import Gallary from '@/features/Home/components/Gallary'
 import SponserShip from '@/features/Home/components/SponserShip'
 import TechLavya from '@/features/Home/components/TechLavya'
 import { AppPage } from '@/types'
@@ -34,6 +35,7 @@ const Home: AppPage = () => {
           <TechLavya />
           <Esports />
           <CulturalEvent />
+          <Gallary />
           <SponserShip />
           <ContactUs />
         </div>
