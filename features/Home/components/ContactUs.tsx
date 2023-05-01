@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Gobinda from '@/assets/members/govindo.jpg'
 import Pallab from '@/assets/members/pallab.png'
 import Puspal from '@/assets/members/puspal.jpg'
 import { UserProfileCard } from '@/components'
@@ -15,11 +16,11 @@ export const MembersData = {
       // social: [
       //   {
       //     id: 'facebook',
-      //     link: 'https://www.facebook.com/Ardentgroup/'
+      //     link: 'https://www.facebook.com/ipallabmaji'
       //   },
       //   {
       //     id: 'linkedin',
-      //     link: 'https://www.linkedin.com/company/ardentinternships/'
+      //     link: 'https://www.linkedin.com/in/pallab-m-0214a3164/'
       //   }
       // ]
     },
@@ -39,7 +40,7 @@ export const MembersData = {
       //     link: 'https://www.linkedin.com/company/ardentinternships/'
       //   }
       // ]
-    }
+    },
     // {
     //   id: '3',
     //   title: 'Sponsorship T. Head',
@@ -112,24 +113,23 @@ export const MembersData = {
     //     }
     //   ]
     // },
-    // {
-    //   id: '7',
-    //   title: 'Social Media',
-    //   name: { fistName: 'Gobinda', lastName: 'Gorai' },
-    //   contact_no: '7407991983',
-    //   imgSrc:
-    //     'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg',
-    //   social: [
-    //     {
-    //       id: 'facebook',
-    //       link: 'https://www.facebook.com/Ardentgroup/'
-    //     },
-    //     {
-    //       id: 'linkedin',
-    //       link: 'https://www.linkedin.com/company/ardentinternships/'
-    //     }
-    //   ]
-    // }
+    {
+      id: '7',
+      title: 'Social Media',
+      name: { fistName: 'Gobinda', lastName: 'Gorai' },
+      contact_no: '7407991983',
+      imgSrc: Gobinda.src
+      // social: [
+      //   {
+      //     id: 'facebook',
+      //     link: 'https://www.facebook.com/gobindagorai20/'
+      //   },
+      //   {
+      //     id: 'linkedin',
+      //     link: 'https://www.linkedin.com/in/gobinda-gorai/'
+      //   }
+      // ]
+    }
   ]
 } as const
 

@@ -130,7 +130,7 @@ export const EventCard = ({
               <a href={rulesLink} target={'_blank'} rel="noreferrer">
                 <button
                   className={
-                    'border border-blue-700 text-blue-700 bg-sky-100 rounded-sm px-3 2xl:px-4 py-0.5 2xl:py-1hover:bg-blue-200 hover:text-blue-700'
+                    'border border-blue-700 text-blue-700 bg-sky-100 rounded-sm px-3 2xl:px-4 py-0.5 2xl:py-1 2xl:text-lg hover:bg-blue-200 hover:text-blue-700'
                   }>
                   Rules
                 </button>

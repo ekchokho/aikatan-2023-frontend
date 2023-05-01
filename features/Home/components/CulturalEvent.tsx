@@ -50,7 +50,7 @@ const CulturalEventData = [
     id: 3,
     description:
       'Feel the Music Surge with Snigdhajit & Lifeline!! Get ready for a mind-blowing band performance at 2nd day of Our Aikatan2.0 that will make your heart race, your feet tap, and your soul soar to the rhythm of the music!',
-    title: 'Snigdhajit',
+    title: 'Snigdhajit & Lifeline',
     imgSrc: Snigdhajit.src,
     time: '6th May Saturday at 10:00PM',
     location: 'College Playground'

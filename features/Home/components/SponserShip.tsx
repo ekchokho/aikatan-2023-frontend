@@ -87,7 +87,7 @@ const SponserShipData = [
     description: '',
     title: 'Ardent Computech',
     location: '',
-    type: 'Supporter',
+    type: 'Training Partner',
     social: [
       {
         id: 'facebook',
@@ -109,7 +109,7 @@ const SponserShipData = [
     description: '',
     title: 'Pragati Cement',
     location: '',
-    type: 'Supporter',
+    type: 'Asociate Sponsor',
     social: [
       {
         id: 'website',
