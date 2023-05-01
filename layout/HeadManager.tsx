@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { DefaultSeo, DefaultSeoProps, NextSeo, NextSeoProps } from 'next-seo'
 import React from 'react'
 
@@ -7,7 +6,7 @@ const common = {
   longTitle: '',
   desc: `Aikatan is the Annual Techno - Cultural fest of Ramkrishna Mahato Government Engineering College. As one of the largest Techno - Cultural fest of west bengal, It is a medium to promote technology and cultural events in young minds in order to feed an arduous Tomorrow.`,
   logo: '/favicon.svg',
-  banner: '/banner.png',
+  banner: '/mainbanner.jpg',
   link: 'https://www.aikatan.org.in/'
 } as const
 
@@ -32,8 +31,7 @@ const seoConfig: DefaultSeoProps = {
         url: common.banner,
         width: 1920,
         height: 1080,
-        alt: 'Aikatan Banner',
-        type: 'image/svg'
+        alt: 'Aikatan Banner'
       }
     ]
   },
@@ -47,9 +45,6 @@ const seoConfig: DefaultSeoProps = {
 const HeadManager = (props: NextSeoProps) => {
   return (
     <>
-      <Head>
-        <title>{common.title}</title>
-      </Head>
       <DefaultSeo {...seoConfig} />
       <NextSeo {...props} />
     </>

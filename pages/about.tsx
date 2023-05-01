@@ -1,6 +1,8 @@
 import React from 'react'
 
-const About = () => {
+import { AppPage } from '@/types'
+
+const About: AppPage = () => {
   return (
     <section
       className={
@@ -29,6 +31,18 @@ const About = () => {
       </div>
     </section>
   )
+}
+
+About.seo = {
+  title: 'ঐকtan2.0 | About Us',
+  openGraph: {
+    title: 'ঐকtan2.0 | About Us',
+    images: [
+      {
+        url: '/about.png'
+      }
+    ]
+  }
 }
 
 export default About
