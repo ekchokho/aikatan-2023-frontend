@@ -77,7 +77,7 @@ export const TechLavyaEvents = [
     name: 'HACK-VENGERS',
     topic: 'Hackathon',
     imgSrc: Hackthon.src,
-    time: '(Question Declaration) 6th May Saturday 09:00AM , (Presentation) 7th May Saturday 11:00AM',
+    time: '6th May Saturday 09:00AM to 7th May Saturday 11:00AM',
     description:
       'Get ready solve the real life problems which are tormenting  the real world. So gear up and get ready to leave your mark in this epic event of creativity and technical knowledge.',
     rules_regulation_link:
@@ -108,7 +108,7 @@ export const TechLavyaEvents = [
     imgSrc: Codethon.src,
     time: YetToBeAnnounced,
     description:
-      'Gear up folks to put your coding knowledge to the ultimate coding test. A chance for the geeks to show off your codeing knowledge in the best way possible and stand a chance to win prizes.',
+      'Gear up folks to put your coding knowledge to the ultimate coding test. A chance for the geeks to show off your knowledge in the best way possible and stand a chance to win prizes.',
     rules_regulation_link: 'https://forms.gle/QvfYipBoHcNKxDQZA',
     register_link: 'https://forms.gle/QvfYipBoHcNKxDQZA',
     contact: [

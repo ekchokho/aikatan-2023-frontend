@@ -13,6 +13,7 @@ import { HiLocationMarker } from 'react-icons/hi'
 import ArdentComputech from '@/assets/sponsers/ardent_logo.png'
 import EventMas from '@/assets/sponsers/eventmas.png'
 import PragatiCement from '@/assets/sponsers/pragati-cement.png'
+import Reel2Real from '@/assets/sponsers/reel2real.png'
 import SagarRajResorts from '@/assets/sponsers/sagar-raj-resorts.png'
 import TelegraphOnline from '@/assets/sponsers/telegraph.png'
 import SpotLightItem from '@/features/Home/components/SpotLightItem'
@@ -79,6 +80,20 @@ const SponserShipData = [
       {
         id: 'website',
         link: 'https://sagarrajresort.com/'
+      }
+    ]
+  },
+  {
+    id: 6,
+    imgSrc: Reel2Real.src,
+    description: '',
+    title: 'Reel2Real',
+    location: '',
+    type: 'Merchandise Partner',
+    social: [
+      {
+        id: 'facebook',
+        link: 'https://www.facebook.com/reel2real.ronit/'
       }
     ]
   },
