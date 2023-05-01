@@ -4,6 +4,7 @@ import { twindConfig } from '@/config'
 import { HeadManager, Layout } from '@/layout'
 import { AppProps } from '@/types'
 import install from '@twind/with-next/app'
+import { Analytics } from '@vercel/analytics/react'
 
 import '@/styles/globals.scss'
 
@@ -14,6 +15,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Layout {...(Component.layout || {})}>
         <Component {...pageProps} />
       </Layout>
+      <Analytics />
     </>
   )
 }
