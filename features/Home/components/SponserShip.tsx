@@ -18,6 +18,7 @@ import TelegraphOnline from '@/assets/sponsers/telegraph.png'
 import SpotLightItem from '@/features/Home/components/SpotLightItem'
 
 import EventCardWrapper from './EventCardWrapper'
+import { tx } from '@twind/core'
 
 export const socialIconMap = {
   facebook: BsFacebook,
@@ -217,17 +218,27 @@ const SponserShipCard = ({
 }
 
 export const SocialCardWrapper = ({
-  children
+  children,
+  className
 }: {
   children: React.ReactNode
+  className?: string
 }) => {
   return (
-    <div className="flex flex-row gap-2 pt-4 items-center text-gray-300">
+    <div
+      className={tx(
+        'flex flex-row gap-2 pt-4 items-center text-gray-300',
+        className
+      )}>
       {children}
     </div>
   )
 }
-export const SocialCard = ({ id, link }: { size?: number } & Social) => {
+export const SocialCard = ({
+  id,
+  link,
+  showText = false
+}: { size?: number; showText?: boolean } & Social) => {
   const Icon = socialIconMap[id]
   return (
     <a
@@ -235,8 +246,11 @@ export const SocialCard = ({ id, link }: { size?: number } & Social) => {
       key={id}
       target={'_blank'}
       rel="noreferrer"
-      className={'hover:text-blue-400 transition-all hover:scale-110'}>
-      <Icon className={'text-lg 2xl:text-xl'} />
+      className={
+        'transition hover:text-blue-400 flex flex-row items-center gap-1'
+      }>
+      <Icon className={'text-base 2xl:text-lg'} />
+      {showText && <span className="capitalize">{id}</span>}
     </a>
   )
 }

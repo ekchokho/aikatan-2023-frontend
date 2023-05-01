@@ -1,8 +1,10 @@
 import React from 'react'
 
+import Amisha from '@/assets/members/amisha.png'
 import Gobinda from '@/assets/members/govindo.jpg'
 import Pallab from '@/assets/members/pallab.png'
 import Puspal from '@/assets/members/puspal.jpg'
+import Snigdha from '@/assets/members/snigdha.png'
 import { UserProfileCard } from '@/components'
 
 export const MembersData = {
@@ -12,34 +14,34 @@ export const MembersData = {
       title: 'President',
       name: { fistName: 'Pallab', lastName: 'Maji' },
       contact_no: '7908613364',
-      imgSrc: Pallab.src
-      // social: [
-      //   {
-      //     id: 'facebook',
-      //     link: 'https://www.facebook.com/ipallabmaji'
-      //   },
-      //   {
-      //     id: 'linkedin',
-      //     link: 'https://www.linkedin.com/in/pallab-m-0214a3164/'
-      //   }
-      // ]
+      imgSrc: Pallab.src,
+      social: [
+        {
+          id: 'facebook',
+          link: 'https://www.facebook.com/ipallabmaji'
+        },
+        {
+          id: 'linkedin',
+          link: 'https://www.linkedin.com/in/pallab-m-0214a3164/'
+        }
+      ]
     },
     {
       id: '2',
       title: 'Convener',
       name: { fistName: 'Puspal', lastName: 'Dey' },
       contact_no: '9382102816',
-      imgSrc: Puspal.src
-      // social: [
-      //   {
-      //     id: 'facebook',
-      //     link: 'https://www.facebook.com/Ardentgroup/'
-      //   },
-      //   {
-      //     id: 'linkedin',
-      //     link: 'https://www.linkedin.com/company/ardentinternships/'
-      //   }
-      // ]
+      imgSrc: Puspal.src,
+      social: [
+        {
+          id: 'facebook',
+          link: ''
+        },
+        {
+          id: 'linkedin',
+          link: ''
+        }
+      ]
     },
     // {
     //   id: '3',
@@ -59,42 +61,40 @@ export const MembersData = {
     //     }
     //   ]
     // },
-    // {
-    //   id: '4',
-    //   title: 'Sponsorship T. Conv.',
-    //   name: { fistName: 'Snigdha', lastName: 'Aditya' },
-    //   contact_no: '8585024537',
-    //   imgSrc:
-    //     'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg',
-    //   social: [
-    //     {
-    //       id: 'facebook',
-    //       link: 'https://www.facebook.com/Ardentgroup/'
-    //     },
-    //     {
-    //       id: 'linkedin',
-    //       link: 'https://www.linkedin.com/company/ardentinternships/'
-    //     }
-    //   ]
-    // },
-    // {
-    //   id: '5',
-    //   title: 'Sponsorship T. Conv.',
-    //   name: { fistName: 'Amisha', lastName: 'Kumari' },
-    //   contact_no: '8637823225',
-    //   imgSrc:
-    //     'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg',
-    //   social: [
-    //     {
-    //       id: 'facebook',
-    //       link: 'https://www.facebook.com/Ardentgroup/'
-    //     },
-    //     {
-    //       id: 'linkedin',
-    //       link: 'https://www.linkedin.com/company/ardentinternships/'
-    //     }
-    //   ]
-    // },
+    {
+      id: '4',
+      title: 'Sponsorship T. Conv.',
+      name: { fistName: 'Snigdha', lastName: 'Aditya' },
+      contact_no: '8585024537',
+      imgSrc: Snigdha.src,
+      social: [
+        {
+          id: 'linkedin',
+          link: 'https://www.linkedin.com/in/snigdha-aditya-3152681b0/'
+        },
+        {
+          id: 'instagram',
+          link: 'https://www.instagram.com/snigdha_aditya/'
+        }
+      ]
+    },
+    {
+      id: '5',
+      title: 'Sponsorship T. Conv.',
+      name: { fistName: 'Amisha', lastName: 'Kumari' },
+      contact_no: '8637823225',
+      imgSrc: Amisha.src,
+      social: [
+        {
+          id: 'facebook',
+          link: 'https://www.facebook.com/profile.php?id=100060742081634'
+        },
+        {
+          id: 'linkedin',
+          link: 'https://www.linkedin.com/in/amisha-kumari-36049421a/'
+        }
+      ]
+    },
     // {
     //   id: '6',
     //   title: 'Social Media',
@@ -118,17 +118,17 @@ export const MembersData = {
       title: 'Social Media',
       name: { fistName: 'Gobinda', lastName: 'Gorai' },
       contact_no: '7407991983',
-      imgSrc: Gobinda.src
-      // social: [
-      //   {
-      //     id: 'facebook',
-      //     link: 'https://www.facebook.com/gobindagorai20/'
-      //   },
-      //   {
-      //     id: 'linkedin',
-      //     link: 'https://www.linkedin.com/in/gobinda-gorai/'
-      //   }
-      // ]
+      imgSrc: Gobinda.src,
+      social: [
+        {
+          id: 'facebook',
+          link: 'https://www.facebook.com/gobindagorai20/'
+        },
+        {
+          id: 'linkedin',
+          link: 'https://www.linkedin.com/in/gobinda-gorai/'
+        }
+      ]
     }
   ]
 } as const

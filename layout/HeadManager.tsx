@@ -4,10 +4,10 @@ import React from 'react'
 
 const common = {
   title:
-    'ঐকtan2.0 - Get ready to experience a world of Creativity Innovation Entertainment.',
+    'ঐকtan2.0 - unleash your tech skills and creativity the premier college tech fest!',
   longTitle:
-    'ঐকtan2.0 - Get ready to experience a world of Creativity Innovation Entertainment.',
-  desc: 'ঐকtan2.0 - Get ready to experience a world of Creativity Innovation Entertainment. Presented By Ramkrishna Mahato Government Engineering College.',
+    'ঐকtan2.0 - unleash your creativity and discover the latest trends in technology at Aikatan, the premier college tech fest of the year, featuring exciting competitions, inspiring talks, and hands-on workshops covering coding, robotics, gaming, design, and more.',
+  desc: `Experience the thrill of innovation at ঐকtan2.0, the ultimate college tech fest! Join us for a day of exciting events and workshops covering everything from coding to design. Don't miss out, register now and unleash your creativity!`,
   logo: '/favicon.svg',
   banner: '/favicon.svg',
   link: 'https://www.aikatan.org.in/'
