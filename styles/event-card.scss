@@ -1,0 +1,43 @@
+.card-container:hover .card-flip {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.card-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-perspective: 700px;
+  perspective: 700px;
+}
+
+.card-flip {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr;
+  grid-template: 1fr / 1fr;
+  grid-template-areas: 'frontAndBack';
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+}
+
+.card-flip div {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.card-front {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: frontAndBack;
+}
+
+.card-back {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: frontAndBack;
+  transform: rotateY(-180deg);
+}

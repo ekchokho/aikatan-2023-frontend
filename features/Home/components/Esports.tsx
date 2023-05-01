@@ -8,7 +8,7 @@ import FreeFire from '@/assets/events/freefire.png'
 import Valorant from '@/assets/events/valorant.png'
 import { YetToBeAnnounced } from '@/features/Home/components/TechLavya'
 
-import EventCard from './EventCard'
+import { EventCardV2 } from './EventCard'
 import EventCardWrapper from './EventCardWrapper'
 
 export const EsportsEventData = [
@@ -17,7 +17,7 @@ export const EsportsEventData = [
     rules: '',
     imgSrc: FreeFire.src,
     name: 'FREE FIRE MAX',
-    description: `Are you ready to enter the ultimate battle arena? The FREE FIRE MAX esports competition offers a opportunity to showcase your skills in a fast-paced, intense battle royale game. Don't miss out on this unique chance to elevate your gaming experience and become a legend in the world of esports. Register now and let the games begin!`,
+    description: `The FREE FIRE MAX esports competition offers a unique chance to elevate your gaming experience and become a legend in the world of esports. Register now and let the games begin!`,
     time: YetToBeAnnounced,
     register_link:
       'https://docs.google.com/forms/d/e/1FAIpQLSft52Xm7qPndepi40rkxPtzwB7-CeZrLkZRinlqOe0XZhPQgQ/viewform',
@@ -34,7 +34,7 @@ export const EsportsEventData = [
     imgSrc: BGMI.src,
     name: 'BGMI',
     rules: '',
-    description: `Ready to battle it out on the virtual battlegrounds? Participate in the BGMI esports competition and put your skills to the test against the best players. With thrilling gameplay and nail-biting matches, and win amazing prizes. Don't miss out on this adrenaline-fueled gaming experience and register today to be a part of the action-packed BGMI esports competition!`,
+    description: `Ready to battle it out on the virtual battlegrounds? Put your skills with thrilling gameplay and nail-biting matches, and win amazing prizes. Don't miss out on this adrenaline-fueled gaming experience!`,
     time: YetToBeAnnounced,
     register_link: 'https://forms.gle/vPjsmEMiYf2w6a9VA',
     contact: [],
@@ -49,7 +49,7 @@ export const EsportsEventData = [
     id: '1',
     imgSrc: FIFA.src,
     name: 'FIFA-18',
-    description: `Join the FIFA-18 e sports competition in college and compete against the best players in the state. This is your chance to represent your college and make a name for yourself in the gaming world. With exciting prizes up for grabs. Don't miss out on this incredible opportunity to be a part of the FIFA-18 esports craze!`,
+    description: `Join the FIFA-18 e sports competition in college and compete against the best players. With exciting prizes up for grabs. Don't miss out on this incredible opportunity!`,
     time: YetToBeAnnounced,
     register_link:
       'https://docs.google.com/forms/d/e/1FAIpQLSegacye9rhbAOSjv4zq6l1Erm-HUDl6bzSuYmr8NDANvWBHAA/viewform',
@@ -68,7 +68,7 @@ export const EsportsEventData = [
     imgSrc: Asphalt.src,
     name: 'Asphalt-8',
     description:
-      "Get ready to burn some rubber and dominate the track in the Asphalt-8 e sports competition. This high-octane event is the ultimate test of speed, skill, and strategy, where you'll compete against other top players in a race to the finish line. With thrilling prizes. Don't miss out on this adrenaline-fueled event. Register now and start your engines!",
+      'Get ready to burn some rubber and dominate the track. This high-octane event is the ultimate test of speed, skill, and strategy. With thrilling prizes. Register now and start your engines!',
     time: YetToBeAnnounced,
     register_link:
       'https://docs.google.com/forms/d/e/1FAIpQLSendeWNEt5Oq80SsKw0zxh1Y0-pXb6Ixo-woge6-zBxb4Ta0Q/viewform',
@@ -86,7 +86,7 @@ export const EsportsEventData = [
     imgSrc: Valorant.src,
     name: 'Valorant',
     description:
-      'Are you ready to unleash your tactical prowess and become a champion in the world of Valorant? Join the Valorant esports competition and compete against other skilled players. With thrilling gameplay and unique character abilities, this game is perfect for those who love strategy and teamwork. Register today and take the first step towards becoming a Valorant legend!',
+      'Unleash your tactical prowess, with thrilling gameplay and unique character abilities, strategy and teamwork. Register today and take the first step towards becoming a Valorant legend!',
     time: YetToBeAnnounced,
     register_link:
       'https://docs.google.com/forms/d/e/1FAIpQLSd9TGrcR6G-9CMjn8pUZoYFk2b7x9Deatg2_pq3OPdpWcNCcw/viewform',
@@ -103,7 +103,7 @@ export const EsportsEventData = [
     rules: '',
     imgSrc: ClashRoyale.src,
     name: 'Clash Royale',
-    description: `Get ready to clash with the best players in college esports! The Clash Royale competition is coming to campus, and it's time to show off your skills. Battle it out in this fast-paced strategy game for a chance to win exciting prizes. Don't miss your chance to compete in one of the hottest esports games around. Register today and get ready to clash!`,
+    description: `Get ready to clash with the best player in college. Battle it out in this fast-paced strategy game for a chance to win exciting prizes. Register today and get ready to clash!`,
     time: YetToBeAnnounced,
     register_link:
       'https://docs.google.com/forms/d/e/1FAIpQLSci4aLKOmNEzxflT76JzPnCB_MosXDzGK6IJ6bm08t5_OgmfQ/viewform',
@@ -143,7 +143,7 @@ const Esports = () => {
             location,
             limitWord
           }) => (
-            <EventCard
+            <EventCardV2
               location={location}
               key={id}
               imgSrc={imgSrc}

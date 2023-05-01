@@ -7,7 +7,7 @@ import Hackthon from '@/assets/events/hackthon.png'
 import Quiz from '@/assets/events/quiz.png'
 import RoboRush from '@/assets/events/roborush.png'
 
-import { EventCard } from './EventCard'
+import { EventCardV2 } from './EventCard'
 import EventCardWrapper from './EventCardWrapper'
 
 export const YetToBeAnnounced = 'Yet to be announced!!'
@@ -20,7 +20,7 @@ export const TechLavyaEvents = [
     topic: 'project exhibition',
     time: '5th May Friday from 10:00AM to 2:00PM',
     description:
-      'Here comes one of the grandest project exhibition of the town. Have knack of thinking out of the box, do you? Then here Techlavya 2023 brings you ACADEXPO, a project exhibition for science and technology like no other. So buckle up and put your projects in for the ACADEXPO and stand a chance to win cool prizes.',
+      'Here comes one of the grandest project exhibition of the town for science and technology like no other. So buckle up and put your projects and stand a chance to win cool prizes.',
     rules_regulation_link:
       'https://drive.google.com/file/d/1LydTPN8M4WBapFf054mp63_3-mXmorJO/view?usp=sharing',
     register_link:
@@ -50,7 +50,7 @@ export const TechLavyaEvents = [
     imgSrc: Quiz.src,
     time: '6th May Saturday from 09:00AM to 11:30AM',
     description:
-      'Gear up folks to put your knowledge to the ultimate test. Techlavya 2023 brings to you the brain busters a quiz like never before. A chance for the geeks to show off your technical knowledge in the best way possible and stand a chance to win prizes.',
+      'Gear up folks to put your knowledge to the ultimate test. A chance for the geeks to show off your technical knowledge in the best way possible and stand a chance to win prizes. Register now!!',
     rules_regulation_link:
       'https://drive.google.com/file/d/1RVvvFJ7O-nvPQ5zgereduEyKiLL6rse1/view?usp=share_link',
     register_link:
@@ -79,7 +79,7 @@ export const TechLavyaEvents = [
     imgSrc: Hackthon.src,
     time: '(Question Declaration) 6th May Saturday 09:00AM , (Presentation) 7th May Saturday 11:00AM',
     description:
-      'Always found solving challenges amusing do you ? Then here TECHLAVYA 2023 brings for you the Hack-vengers and get ready solve the real life problems which are tormenting  the real world. So gear up and get ready to leave your mark in this epic event of creativity and technical knowledge.',
+      'Get ready solve the real life problems which are tormenting  the real world. So gear up and get ready to leave your mark in this epic event of creativity and technical knowledge.',
     rules_regulation_link:
       'https://drive.google.com/file/d/12NpsZRvS-dH9PENtIe4JVk0IyBQDUEjQ/view?usp=sharing',
     register_link:
@@ -108,7 +108,7 @@ export const TechLavyaEvents = [
     imgSrc: Codethon.src,
     time: YetToBeAnnounced,
     description:
-      'Gear up folks to put your coding knowledge to the ultimate coding test. Techlavya 2023 brings to you the brain busters a coding challenge like never before. A chance for the geeks to show off your codeing knowledge in the best way possible and stand a chance to win prizes.',
+      'Gear up folks to put your coding knowledge to the ultimate coding test. A chance for the geeks to show off your codeing knowledge in the best way possible and stand a chance to win prizes.',
     rules_regulation_link: 'https://forms.gle/QvfYipBoHcNKxDQZA',
     register_link: 'https://forms.gle/QvfYipBoHcNKxDQZA',
     contact: [
@@ -135,7 +135,7 @@ export const TechLavyaEvents = [
     topic: 'Robo Car Racing',
     time: YetToBeAnnounced,
     description:
-      'Here Techlavya 2023 bring The Roborush for you, design your own robo car and prepare them for dirt, hills, pots and obstacles!!!!! So rub out the dust from your tools here the time comes to start innovation again with RoboRush with exciting prizes for the winners.',
+      'Design your own robo car and prepare them for dirt, hills, pots and obstacles!!!!! So rub out the dust from your tools here the time comes to start innovation with exciting prizes for the winners.',
     rules_regulation_link:
       'https://drive.google.com/file/d/1unn2SRYUfMXJknRAxo_idAPH0WYmZzCs/view?usp=sharing',
     register_link:
@@ -164,7 +164,7 @@ export const TechLavyaEvents = [
     imgSrc: Design.src,
     time: YetToBeAnnounced,
     description:
-      'Gear up folks to put your design knowledge to the ultimate graphic design chhalaang. Techlavya 2023 brings to you a graphics design challenge like never before. A chance for the geeks to show off your design knowledge in the best way possible and stand a chance to win prizes.',
+      'Brings to you a graphics design challenge like never before. A chance for the geeks to show off your design knowledge in the best way possible and stand a chance to win prizes.',
     rules_regulation_link:
       'https://docs.google.com/forms/d/e/1FAIpQLScHI8YRhNJdUuPUfhfw3voRJp9n722Xj_YWwcVf1S-rZTcpbw/viewform',
     register_link:
@@ -214,7 +214,7 @@ const TechLavya = () => {
             location,
             limitWord
           }) => (
-            <EventCard
+            <EventCardV2
               key={id}
               description={description}
               imgSrc={imgSrc}

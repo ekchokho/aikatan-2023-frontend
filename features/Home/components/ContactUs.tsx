@@ -4,6 +4,7 @@ import Amisha from '@/assets/members/amisha.png'
 import Gobinda from '@/assets/members/govindo.jpg'
 import Pallab from '@/assets/members/pallab.png'
 import Puspal from '@/assets/members/puspal.jpg'
+import Sankhadeep from '@/assets/members/sankhadeep.png'
 import Snigdha from '@/assets/members/snigdha.png'
 import { UserProfileCard } from '@/components'
 
@@ -63,7 +64,7 @@ export const MembersData = {
     // },
     {
       id: '4',
-      title: 'Sponsorship T. Conv.',
+      title: 'Sponsorship',
       name: { fistName: 'Snigdha', lastName: 'Aditya' },
       contact_no: '8585024537',
       imgSrc: Snigdha.src,
@@ -80,7 +81,7 @@ export const MembersData = {
     },
     {
       id: '5',
-      title: 'Sponsorship T. Conv.',
+      title: 'Sponsorship',
       name: { fistName: 'Amisha', lastName: 'Kumari' },
       contact_no: '8637823225',
       imgSrc: Amisha.src,
@@ -95,24 +96,31 @@ export const MembersData = {
         }
       ]
     },
-    // {
-    //   id: '6',
-    //   title: 'Social Media',
-    //   name: { fistName: 'Sankhadeep', lastName: 'Paul' },
-    //   contact_no: '7407991983',
-    //   imgSrc:
-    //     'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg',
-    //   social: [
-    //     {
-    //       id: 'facebook',
-    //       link: 'https://www.facebook.com/Ardentgroup/'
-    //     },
-    //     {
-    //       id: 'linkedin',
-    //       link: 'https://www.linkedin.com/company/ardentinternships/'
-    //     }
-    //   ]
-    // },
+    {
+      id: '6',
+      title: 'Social Media',
+      name: { fistName: 'Sankhadeep', lastName: 'Paul' },
+      contact_no: '7407991983',
+      imgSrc: Sankhadeep.src,
+      social: [
+        {
+          id: 'instagram',
+          link: 'https://www.instagram.com/a_bong_traveller/'
+        },
+        {
+          id: 'facebook',
+          link: 'https://www.facebook.com/sankhadeep.paul.129'
+        },
+        {
+          id: 'linkedin',
+          link: 'https://www.linkedin.com/in/sankhadeep-paul-1aa2681a1/'
+        },
+        {
+          id: 'youtube',
+          link: 'https://www.youtube.com/channel/UCHNZawwGNFJLxBGQfqC2viQ'
+        }
+      ]
+    },
     {
       id: '7',
       title: 'Social Media',

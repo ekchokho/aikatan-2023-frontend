@@ -44,9 +44,7 @@ export const EventCard = ({
 
   return (
     <div
-      className={
-        'w-full h-max sm:w-72 2xl:w-80 rounded shadow-xl overflow-hidden'
-      }>
+      className={'w-full sm:w-72 2xl:w-80 rounded shadow-xl overflow-hidden'}>
       <div
         className={`bg-center bg-cover w-full h-32 overflow-auto bg-[url(${imgSrc})]`}></div>
 
@@ -144,3 +142,112 @@ export const EventCard = ({
 }
 
 export default EventCard
+
+export const EventCardV2 = ({
+  description,
+  heading,
+  imgSrc,
+  registrationLink,
+  rulesLink,
+  contacts,
+  prizes,
+  time,
+  location
+}: EventCardProps) => {
+  return (
+    <SpotLightItem
+      className={
+        'card-container max-h-[23rem] sm:w-72 2xl:w-80 w-full rounded shadow-xl overflow-hidden'
+      }>
+      <div className="card-flip text-content-medium">
+        <div className="card-front flex flex-col">
+          <div
+            className={`bg-center bg-cover w-full h-32 overflow-auto bg-[url(${imgSrc})]`}></div>
+          <div className="flex-1 flex flex-col p-3 gap-2 justify-between">
+            <div className="flex flex-col gap-2">
+              <h3 className={'text-2xl font-semibold'}>{heading}</h3>
+
+              <div className="text-content-medium flex flex-col gap-2">
+                <p>{description}</p>
+              </div>
+            </div>
+            <p className={'font-sm text-center text-gray-500'}>
+              Tap in Register
+            </p>
+          </div>
+        </div>
+        <div className="card-back p-3 flex flex-col gap-4 justify-center items-center">
+          <div className={'flex flex-col gap-1 items-center'}>
+            {prizes && (prizes.winner || prizes.runner_up) && (
+              <>
+                <p>
+                  <b>Prizes:</b>
+                </p>
+                {prizes.winner && <p>Winner - {prizes.winner}</p>}
+                {prizes.runner_up && <p>RunnerUp - {prizes.runner_up}</p>}
+              </>
+            )}
+            {time && (
+              <>
+                <p>
+                  <b>Time: </b>
+                </p>
+                <p className={'text-center'}> {time}</p>
+              </>
+            )}
+
+            {location && (
+              <>
+                <p>
+                  <b>Location: </b>
+                </p>
+                <p> {location}</p>
+              </>
+            )}
+
+            {contacts.length > 0 && (
+              <>
+                <p>
+                  <b>Contact:</b>
+                </p>
+                <p>
+                  {contacts
+                    .map(({ number, name }) => {
+                      if (name) {
+                        return `${number} (${name})`
+                      } else {
+                        return number
+                      }
+                    })
+                    .join(', ')}
+                </p>
+              </>
+            )}
+          </div>
+          <div className={'flex flex-row gap-3'}>
+            {registrationLink && (
+              <a href={registrationLink}>
+                <button
+                  className={
+                    'bg-blue-700 rounded-sm px-3 2xl:px-4 py-0.5 2xl:py-1 2xl:text-lg hover:bg-blue-900'
+                  }>
+                  Register
+                </button>
+              </a>
+            )}
+            {rulesLink && (
+              <a href={rulesLink} target={'_blank'} rel="noreferrer">
+                <button
+                  className={
+                    'border border-blue-700 text-blue-700 bg-sky-100 rounded-sm px-3 2xl:px-4 py-0.5 2xl:py-1 2xl:text-lg hover:bg-blue-200 hover:text-blue-700'
+                  }>
+                  Rules
+                </button>
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </SpotLightItem>
+  )
+}
