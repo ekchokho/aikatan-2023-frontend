@@ -4,8 +4,7 @@ import React from 'react'
 
 const common = {
   title: 'ঐকtan2.0 - Unleash your tech skills and creativity!',
-  longTitle:
-    'ঐকtan2.0 - Unleash your creativity and discover the latest trends in technology at Aikatan, the premier college tech fest of the year, featuring exciting competitions, inspiring talks, and hands-on workshops covering coding, robotics, gaming, design, and more.',
+  longTitle: '',
   desc: `Aikatan is the Annual Techno - Cultural fest of Ramkrishna Mahato Government Engineering College. As one of the largest Techno - Cultural fest of west bengal, It is a medium to promote technology and cultural events in young minds in order to feed an arduous Tomorrow.`,
   logo: '/favicon.svg',
   banner: '/banner.png',
