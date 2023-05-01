@@ -16,9 +16,9 @@ import PragatiCement from '@/assets/sponsers/pragati-cement.png'
 import SagarRajResorts from '@/assets/sponsers/sagar-raj-resorts.png'
 import TelegraphOnline from '@/assets/sponsers/telegraph.png'
 import SpotLightItem from '@/features/Home/components/SpotLightItem'
+import { tx } from '@twind/core'
 
 import EventCardWrapper from './EventCardWrapper'
-import { tx } from '@twind/core'
 
 export const socialIconMap = {
   facebook: BsFacebook,
