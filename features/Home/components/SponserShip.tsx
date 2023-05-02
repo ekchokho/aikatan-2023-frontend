@@ -103,6 +103,20 @@ const SponserShipData = [
     ]
   },
   {
+    id: 11,
+    imgSrc: KBCityMall.src,
+    description: '',
+    title: 'KB City Mall',
+    location: '',
+    type: 'Asociate Sponsor',
+    social: [
+      {
+        id: 'facebook',
+        link: 'https://www.facebook.com/kbcitymallpurulia'
+      }
+    ]
+  },
+  {
     id: 4,
     imgSrc: ArdentComputech.src,
     description: '',
@@ -139,20 +153,6 @@ const SponserShipData = [
       {
         id: 'facebook',
         link: 'https://www.facebook.com/PragatiCementIndiaPvtLtd'
-      }
-    ]
-  },
-  {
-    id: 6,
-    imgSrc: KBCityMall.src,
-    description: '',
-    title: 'KB City Mall',
-    location: '',
-    type: 'Asociate Sponsor',
-    social: [
-      {
-        id: 'facebook',
-        link: 'https://www.facebook.com/kbcitymallpurulia'
       }
     ]
   },

@@ -12,6 +12,7 @@ type EventCardProps = {
   prizes: {
     winner: string
     runner_up: string
+    runner_up_2nd?: string
   }
   location: string
   contacts: readonly {
@@ -19,6 +20,8 @@ type EventCardProps = {
     number: string
   }[]
   limitWord: number | 'default'
+  className?: string
+  entry_fee?: string
 }
 
 export const EventCard = ({
@@ -152,7 +155,8 @@ export const EventCardV2 = ({
   contacts,
   prizes,
   time,
-  location
+  location,
+  entry_fee
 }: EventCardProps) => {
   return (
     <SpotLightItem
@@ -176,23 +180,44 @@ export const EventCardV2 = ({
             </p>
           </div>
         </div>
-        <div className="card-back p-3 flex flex-col gap-4 justify-center items-center">
-          <div className={'flex flex-col gap-1 items-center'}>
-            {prizes && (prizes.winner || prizes.runner_up) && (
+        <div className="card-back p-3 flex flex-col justify-evenly items-center">
+          <div className={'flex flex-col'}>
+            {entry_fee && (
               <>
                 <p>
-                  <b>Prizes:</b>
+                  <b>Entry Fee:</b> {entry_fee}
                 </p>
-                {prizes.winner && <p>Winner - {prizes.winner}</p>}
-                {prizes.runner_up && <p>RunnerUp - {prizes.runner_up}</p>}
               </>
             )}
+            {prizes &&
+              (prizes.winner || prizes.runner_up || prizes.runner_up_2nd) && (
+                <>
+                  <p>
+                    <b>Prizes:</b>
+                  </p>
+                  {prizes.winner && <p>Winner - {prizes.winner}</p>}
+                  {prizes.runner_up_2nd ? (
+                    <>
+                      {prizes.runner_up && (
+                        <p>1st RunnerUp - {prizes.runner_up}</p>
+                      )}
+                      {prizes.runner_up_2nd && (
+                        <p>2nd RunnerUp - {prizes.runner_up_2nd}</p>
+                      )}
+                    </>
+                  ) : (
+                    <>
+                      {prizes.runner_up && <p>RunnerUp - {prizes.runner_up}</p>}
+                    </>
+                  )}
+                </>
+              )}
             {time && (
               <>
                 <p>
                   <b>Time: </b>
                 </p>
-                <p className={'text-center'}> {time}</p>
+                <p className={''}> {time}</p>
               </>
             )}
 
@@ -224,12 +249,12 @@ export const EventCardV2 = ({
               </>
             )}
           </div>
-          <div className={'flex flex-row gap-3'}>
+          <div className={'flex flex-row gap-2'}>
             {registrationLink && (
               <a href={registrationLink}>
                 <button
                   className={
-                    'bg-blue-700 rounded-sm px-3 2xl:px-4 py-0.5 2xl:py-1 2xl:text-lg hover:bg-blue-900'
+                    'h-full bg-blue-700 rounded-sm px-3 2xl:px-4 py-0.5 2xl:py-1 2xl:text-lg hover:bg-blue-900'
                   }>
                   Register
                 </button>

@@ -9,32 +9,32 @@ export const EventData = [
     shedules: [
       {
         to: '09:00AM',
-        from: '11:00AM',
-        name: 'Codethon'
+        from: '',
+        name: 'School Level Quiz, Codethon'
       },
       {
         to: '10:00AM',
-        from: '02:00PM',
-        name: 'Project exhibition'
+        from: '',
+        name: 'Project Exhibition School & College'
       },
       {
-        to: '02:30PM',
-        from: '04:30PM',
-        name: 'School Level Quiz Graphics Designing Seminar'
+        to: '03:00PM',
+        from: '',
+        name: 'Graphics Designing, Seminar 1'
       },
       {
         to: '05:00PM',
-        from: '06:00PM',
+        from: '',
         name: 'Chhau Nach'
       },
       {
         to: '06:30AM',
-        from: '08:30PM',
+        from: '',
         name: 'Reunion & Facilitation of seniors'
       },
       {
-        to: '9:30PM',
-        from: '12:00PM',
+        to: '09:30PM',
+        from: '',
         name: 'Band performance of OCTAVE'
       }
     ]
@@ -48,24 +48,24 @@ export const EventData = [
         name: 'Hackathon Question Declaration'
       },
       {
-        to: '09:00AM',
-        from: '11:30AM',
-        name: 'College Level Quiz'
+        to: '11:00AM',
+        from: '',
+        name: 'RoboRush, Esports 1 Life line'
       },
       {
-        to: '11:00AM',
-        from: '02:00PM',
-        name: 'Esports 1 Life line'
+        to: '03:00PM',
+        from: '',
+        name: 'College Level Quiz, Hackathon Presentation'
       },
       {
         to: '05:00PM',
-        from: '09:00PM',
+        from: '',
         name: 'Cultural Events'
       },
       {
         to: '10:00PM',
-        from: '12:00AM',
-        name: 'Band performance of OCTAVE'
+        from: '',
+        name: 'Snigdhajit & Lifeline'
       }
     ]
   },
@@ -74,34 +74,34 @@ export const EventData = [
     shedules: [
       {
         to: '09:00AM',
-        from: '11:00AM',
+        from: '',
         name: 'Esports 2'
       },
       {
         to: '11:00AM',
-        from: '02:30PM',
+        from: '',
         name: 'Hackathon Presentation'
       },
       {
         to: '03:00PM',
-        from: '05:00PM',
+        from: '',
         name: 'Seminar 2'
       },
       {
         to: '05:00PM',
-        from: '07:00PM',
+        from: '',
         name: 'Cultural Events'
       },
 
       {
         to: '07:00PM',
-        from: '09:00AM',
+        from: '',
         name: 'Band performance of TRAP'
       },
       {
         to: '10:00PM',
-        from: '12:00AM',
-        name: 'Dj night by Dj Koyel'
+        from: '',
+        name: 'Dj Night by Dj Koyel'
       }
     ]
   }

@@ -53,7 +53,7 @@ const EventScheduleCard = ({ date, shedules }: EventCardProps) => {
       <SpotLightItem className={'bg-gray-800 p-4 rounded-lg shadow-xl'}>
         {shedules.map(({ name, from, to }, idx) => {
           return (
-            <div key={idx} className="flex flex-row gap-3 items-center">
+            <div key={idx} className="flex flex-row gap-3 items-start">
               <div className={'text-gray-400 text-lg'}>
                 <p>{to}</p>
                 <p className={'text-center'}>{from}</p>

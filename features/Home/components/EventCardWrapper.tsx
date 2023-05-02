@@ -1,7 +1,19 @@
 import React from 'react'
 
-const EventCardWrapper = ({ children }: { children: React.ReactNode }) => {
-  return <div className="flex flex-wrap gap-10 justify-center">{children}</div>
+import { tx } from '@twind/core'
+
+const EventCardWrapper = ({
+  children,
+  className
+}: {
+  children: React.ReactNode
+  className?: string
+}) => {
+  return (
+    <div className={tx('flex flex-wrap gap-10 justify-center', className)}>
+      {children}
+    </div>
+  )
 }
 
 export default EventCardWrapper

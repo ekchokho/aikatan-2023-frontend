@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Amisha from '@/assets/members/amisha.png'
+import Bivas from '@/assets/members/bivas.png'
 import Gobinda from '@/assets/members/govindo.jpg'
 import Pallab from '@/assets/members/pallab.png'
 import Puspal from '@/assets/members/puspal.jpg'
@@ -36,12 +36,12 @@ export const MembersData = {
       imgSrc: Puspal.src,
       social: [
         {
-          id: 'facebook',
-          link: ''
+          id: 'instagram',
+          link: 'https://instagram.com/puspal_dey_stark45?igshid=ZDdkNTZiNTM='
         },
         {
           id: 'linkedin',
-          link: ''
+          link: 'https://www.linkedin.com/in/puspal-dey-49a56020a'
         }
       ]
     },
@@ -79,23 +79,23 @@ export const MembersData = {
         }
       ]
     },
-    {
-      id: '5',
-      title: 'Sponsorship',
-      name: { fistName: 'Amisha', lastName: 'Kumari' },
-      contact_no: '8637823225',
-      imgSrc: Amisha.src,
-      social: [
-        {
-          id: 'facebook',
-          link: 'https://www.facebook.com/profile.php?id=100060742081634'
-        },
-        {
-          id: 'linkedin',
-          link: 'https://www.linkedin.com/in/amisha-kumari-36049421a/'
-        }
-      ]
-    },
+    // {
+    //   id: '5',
+    //   title: 'Sponsorship',
+    //   name: { fistName: 'Amisha', lastName: 'Kumari' },
+    //   contact_no: '8637823225',
+    //   imgSrc: Amisha.src,
+    //   social: [
+    //     {
+    //       id: 'facebook',
+    //       link: 'https://www.facebook.com/profile.php?id=100060742081634'
+    //     },
+    //     {
+    //       id: 'linkedin',
+    //       link: 'https://www.linkedin.com/in/amisha-kumari-36049421a/'
+    //     }
+    //   ]
+    // },
     {
       id: '6',
       title: 'Social Media',
@@ -125,7 +125,7 @@ export const MembersData = {
       id: '7',
       title: 'Social Media & Design',
       name: { fistName: 'Gobinda', lastName: 'Gorai' },
-      contact_no: '7407991983',
+      contact_no: '9907260741',
       imgSrc: Gobinda.src,
       social: [
         {
@@ -135,6 +135,31 @@ export const MembersData = {
         {
           id: 'linkedin',
           link: 'https://www.linkedin.com/in/gobinda-gorai/'
+        }
+      ]
+    },
+    {
+      id: '8',
+      title: 'Web',
+      name: { fistName: 'Bivas', lastName: 'Biswas' },
+      contact_no: '9331646032',
+      imgSrc: Bivas.src,
+      social: [
+        {
+          id: 'github',
+          link: 'https://github.com/Bivas-Biswas'
+        },
+        {
+          id: 'linkedin',
+          link: 'https://github.com/Bivas-Biswas'
+        },
+        {
+          id: 'twitter',
+          link: 'https://twitter.com/bivasbiswas99'
+        },
+        {
+          id: 'website',
+          link: 'https://bivasbiswas.super.site/'
         }
       ]
     }
