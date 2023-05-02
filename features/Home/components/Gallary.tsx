@@ -75,7 +75,7 @@ export default Gallary
 const GallaryCard = ({ imgSrc }: { imgSrc: string }) => {
   return (
     <SpotLightItem className="p-1">
-      <div className={'w-60 h-60 overflow-hidden rouned'}>
+      <div className={'w-full h-full sm:w-60 sm:h-60 overflow-hidden rouned'}>
         <motion.img
           src={imgSrc}
           alt=""

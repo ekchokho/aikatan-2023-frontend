@@ -161,7 +161,7 @@ export const EventCardV2 = ({
   return (
     <SpotLightItem
       className={
-        'card-container max-h-[23rem] sm:w-72 2xl:w-80 w-full rounded shadow-xl overflow-hidden'
+        'card-container h-[23rem] w-80 rounded shadow-xl overflow-hidden'
       }>
       <div className="card-flip text-content-medium">
         <div className="card-front flex flex-col">
@@ -180,7 +180,7 @@ export const EventCardV2 = ({
             </p>
           </div>
         </div>
-        <div className="card-back p-3 flex flex-col justify-evenly items-center">
+        <div className="card-back p-3 flex flex-col justify-evenly">
           <div className={'flex flex-col'}>
             {entry_fee && (
               <>

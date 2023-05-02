@@ -289,10 +289,7 @@ const SponserShipCard = ({
   social
 }: SponserShipCardProps) => {
   return (
-    <div
-      className={
-        'w-full h-max sm:w-72 2xl:w-80 rounded shadow-xl overflow-hidden'
-      }>
+    <div className={'h-max w-80 rounded shadow-xl overflow-hidden'}>
       <div
         className={`bg-center bg-cover w-full h-32 overflow-auto bg-[url(${imgSrc})]`}></div>
       <SpotLightItem>

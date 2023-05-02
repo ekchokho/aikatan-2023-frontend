@@ -16,7 +16,7 @@ const social: Social[] = [
 const Footer = () => {
   return (
     <SpotLightItem className={'mt-20 text-gray-300'}>
-      <div className="px-3 flex flex-col gap-5 pt-5 pb-3 items-center justify-center sm:max-w-3xl mx-auto">
+      <div className="px-10 flex flex-col gap-5 pt-5 pb-3 items-center justify-center sm:max-w-3xl mx-auto">
         <div className="flex flex-wrap gap-5 sm:gap-10">
           <div className="flex flex-col">
             <a
