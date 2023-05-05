@@ -1,15 +1,15 @@
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 import React from 'react'
 
 import Logo from '@/assets/icons/Aikatan-logo.webp'
 import NeonEffect from '@/assets/icons/neon-effect.png'
 
-const CountDownTimerDynamic = dynamic(
-  () => import('../components/CountDownTimer'),
-  {
-    ssr: false
-  }
-)
+// const CountDownTimerDynamic = dynamic(
+//   () => import('../components/CountDownTimer'),
+//   {
+//     ssr: false
+//   }
+// )
 
 const IntroSection = () => {
   return (
@@ -46,7 +46,7 @@ const IntroSection = () => {
         </div>
       </h1>
 
-      <CountDownTimerDynamic />
+      {/* <CountDownTimerDynamic /> */}
     </div>
   )
 }
