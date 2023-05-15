@@ -1,6 +1,6 @@
 import React from 'react'
-import { AiOutlinePhone } from 'react-icons/ai'
 
+// import { AiOutlinePhone } from 'react-icons/ai'
 import {
   Social,
   SocialCard,
@@ -49,10 +49,10 @@ const UserProfileCard = ({
             </p>
             <p className={'font-semibold text-lg'}>{title}</p>
           </div>
-          <div className="flex flex-row items-center justify-center gap-1 text-gray-300">
+          {/* <div className="flex flex-row items-center justify-center gap-1 text-gray-300">
             <AiOutlinePhone size={18} />
-            {/* <p>{contact_no}</p> */}
-          </div>
+            <p>{contact_no}</p>
+          </div> */}
           {social && social.length > 0 && (
             <SocialCardWrapper>
               {social.map(({ id, link }) => (
