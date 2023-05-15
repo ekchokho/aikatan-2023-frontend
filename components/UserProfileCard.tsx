@@ -13,14 +13,14 @@ type UserProfileCardProps = {
     fistName: string
     lastName: string
   }
-  contact_no: string
+  contact_no?: string
   imgSrc?: string
   title: string
   social?: readonly Social[]
 }
 
 const UserProfileCard = ({
-  contact_no,
+  // contact_no,
   imgSrc,
   name,
   title,
@@ -51,7 +51,7 @@ const UserProfileCard = ({
           </div>
           <div className="flex flex-row items-center justify-center gap-1 text-gray-300">
             <AiOutlinePhone size={18} />
-            <p>{contact_no}</p>
+            {/* <p>{contact_no}</p> */}
           </div>
           {social && social.length > 0 && (
             <SocialCardWrapper>

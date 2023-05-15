@@ -57,7 +57,7 @@ const Gallary = () => {
             'font-extrabold uppercase text-4xl 2xl:text-5xl sm:text-center my-10 text-content'
           }>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-yellow-500">
-            Gallary
+            Gallery
           </span>
         </h2>
       </a>
